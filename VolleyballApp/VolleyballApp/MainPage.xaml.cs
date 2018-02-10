@@ -28,7 +28,7 @@ namespace VolleyballApp
 
         private void Team_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Success", "Clicked on Team", "Great");
+            Navigation.PushAsync(new TeamPage());
         }
 	}
 }
