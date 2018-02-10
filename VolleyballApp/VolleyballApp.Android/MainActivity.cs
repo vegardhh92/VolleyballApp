@@ -19,8 +19,12 @@ namespace VolleyballApp.Droid
 
             base.OnCreate(bundle);
 
+            string fileName = "players_db.sqLite";
+            string fileLocation = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string full_path = System.IO.Path.Combine(fileLocation, fileName);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            LoadApplication(new App(full_path));
         }
     }
 }

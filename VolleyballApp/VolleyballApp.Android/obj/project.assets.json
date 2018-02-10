@@ -60,6 +60,15 @@
           "lib/MonoAndroid/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "System.AppContext/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
       "Xamarin.Android.Support.Animated.Vector.Drawable/25.4.0.2": {
         "type": "package",
         "dependencies": {
@@ -471,6 +480,59 @@
         "sqlitepclraw.provider.e_sqlite3.android.nuspec"
       ]
     },
+    "System.AppContext/4.3.0": {
+      "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
+      "type": "package",
+      "path": "system.appcontext/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.AppContext.dll",
+        "lib/net463/System.AppContext.dll",
+        "lib/netcore50/System.AppContext.dll",
+        "lib/netstandard1.6/System.AppContext.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.AppContext.dll",
+        "ref/net463/System.AppContext.dll",
+        "ref/netstandard/_._",
+        "ref/netstandard1.3/System.AppContext.dll",
+        "ref/netstandard1.3/System.AppContext.xml",
+        "ref/netstandard1.3/de/System.AppContext.xml",
+        "ref/netstandard1.3/es/System.AppContext.xml",
+        "ref/netstandard1.3/fr/System.AppContext.xml",
+        "ref/netstandard1.3/it/System.AppContext.xml",
+        "ref/netstandard1.3/ja/System.AppContext.xml",
+        "ref/netstandard1.3/ko/System.AppContext.xml",
+        "ref/netstandard1.3/ru/System.AppContext.xml",
+        "ref/netstandard1.3/zh-hans/System.AppContext.xml",
+        "ref/netstandard1.3/zh-hant/System.AppContext.xml",
+        "ref/netstandard1.6/System.AppContext.dll",
+        "ref/netstandard1.6/System.AppContext.xml",
+        "ref/netstandard1.6/de/System.AppContext.xml",
+        "ref/netstandard1.6/es/System.AppContext.xml",
+        "ref/netstandard1.6/fr/System.AppContext.xml",
+        "ref/netstandard1.6/it/System.AppContext.xml",
+        "ref/netstandard1.6/ja/System.AppContext.xml",
+        "ref/netstandard1.6/ko/System.AppContext.xml",
+        "ref/netstandard1.6/ru/System.AppContext.xml",
+        "ref/netstandard1.6/zh-hans/System.AppContext.xml",
+        "ref/netstandard1.6/zh-hant/System.AppContext.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.AppContext.dll",
+        "system.appcontext.4.3.0.nupkg.sha512",
+        "system.appcontext.nuspec"
+      ]
+    },
     "Xamarin.Android.Support.Animated.Vector.Drawable/25.4.0.2": {
       "sha512": "SaSUvYnc6ntGD/Rvo8O+Ks1yS5hgMFUPfPIEsBC337weZzyIeInKQJHt2myxCEER/5UutmBPlptlbn9Yki21RA==",
       "type": "package",
@@ -861,10 +923,10 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v7.1": [
+      "System.AppContext >= 4.3.0",
       "VolleyballApp >= 1.0.0",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
       "Xamarin.Android.Support.v4 >= 25.4.0.2",
-      "Xamarin.Android.Support.v7.AppCompat >= 25.4.0.2",
       "Xamarin.Android.Support.v7.CardView >= 25.4.0.2",
       "Xamarin.Android.Support.v7.MediaRouter >= 25.4.0.2",
       "Xamarin.Forms >= 2.5.0.122203",
@@ -872,24 +934,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\141459\\.nuget\\packages\\": {},
+    "C:\\Users\\vegar_000\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
+      "projectUniqueName": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
       "projectName": "VolleyballApp.Android",
-      "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
-      "packagesPath": "C:\\Users\\141459\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\obj\\",
+      "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
+      "packagesPath": "C:\\Users\\vegar_000\\.nuget\\packages\\",
+      "outputPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\141459\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vegar_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -903,8 +965,8 @@
       "frameworks": {
         "monoandroid71": {
           "projectReferences": {
-            "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
-              "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
+            "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
+              "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
             }
           }
         }
@@ -913,15 +975,15 @@
     "frameworks": {
       "monoandroid71": {
         "dependencies": {
+          "System.AppContext": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
           "Xamarin.Android.Support.Design": {
             "target": "Package",
             "version": "[25.4.0.2, )"
           },
           "Xamarin.Android.Support.v4": {
-            "target": "Package",
-            "version": "[25.4.0.2, )"
-          },
-          "Xamarin.Android.Support.v7.AppCompat": {
             "target": "Package",
             "version": "[25.4.0.2, )"
           },

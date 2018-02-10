@@ -17,6 +17,17 @@ namespace VolleyballApp
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+           
+            using(SQLite.SQLiteConnection conn  = new SQLite.SQLiteConnection(App.DB_PATH))
+            {
+                conn.CreateTable<Player>();
+                var players = conn.Table<Player>().ToList();
+                teamMembersListView.ItemsSource = players;
+            }
+        }
 
         public void Save_Button_Clicked(object sender, EventArgs e)
         {
@@ -29,10 +40,22 @@ namespace VolleyballApp
                 name = nameEntry.Text,
                 position = positionEntry.Items[positionEntry.SelectedIndex]
             };
-            DisplayAlert("Success", numberEntry.Text + player.name + player.position, "Great");
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.DB_PATH))
+            {
+                conn.CreateTable<Player>();
+                var numberOfRows = conn.Insert(player);
+
+                if (numberOfRows > 0)
+                    DisplayAlert("Success", "player successfully added", "OK");
+                else
+                    DisplayAlert("Failure", "failed to insert player", "OK");
+            }
+           // DisplayAlert("Success", numberEntry.Text + player.name + player.position, "Great");
+           
         }
     }
-}/*
+}
+/*
         public static string getDBPath()
         {
             

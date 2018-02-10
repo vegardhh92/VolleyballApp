@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VolleyballApp.TeamPage">
-   
+
     <StackLayout Margin="10,10,10,0">
         <Entry x:Name="numberEntry" Placeholder="Player number"/>
         <Entry x:Name="nameEntry" Placeholder="Player name" />
@@ -16,6 +16,14 @@
             </Picker.Items>
         </Picker>
         <Button Text="Save" Clicked="Save_Button_Clicked"/>
+        <Label Text="My team"/>
+        <ListView x:Name="teamMembersListView"
+                  IsPullToRefreshEnabled="true" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}"  Detail="{Binding position}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
-   
 </ContentPage>

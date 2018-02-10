@@ -507,7 +507,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\141459\\.nuget\\packages\\": {},
+    "C:\\Users\\vegar_000\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -517,18 +517,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj",
+      "projectUniqueName": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj",
       "projectName": "VolleyballApp",
-      "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj",
-      "packagesPath": "C:\\Users\\141459\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\obj\\",
+      "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj",
+      "packagesPath": "C:\\Users\\vegar_000\\.nuget\\packages\\",
+      "outputPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\141459\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vegar_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

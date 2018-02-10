@@ -11,8 +11,8 @@
 namespace VolleyballApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\Volley" +
-        "ballApp\\TeamPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp" +
+        "\\VolleyballApp\\TeamPage.xaml")]
     public partial class TeamPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -25,11 +25,15 @@ namespace VolleyballApp {
         private global::Xamarin.Forms.Picker positionEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView teamMembersListView;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TeamPage));
             numberEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "numberEntry");
             nameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "nameEntry");
             positionEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "positionEntry");
+            teamMembersListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "teamMembersListView");
         }
     }
 }
