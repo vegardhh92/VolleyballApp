@@ -17,8 +17,11 @@
         </Picker>
         <Button Text="Save" Clicked="Save_Button_Clicked"/>
         <Label Text="My team"/>
-        <ListView x:Name="teamMembersListView"
-                  IsPullToRefreshEnabled="true" >
+        <ListView x:Name="teamMembersListView">
+            <!--   IsPullToRefreshEnabled="true" 
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsBusy}">
+            --> 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding name}"  Detail="{Binding position}"/>

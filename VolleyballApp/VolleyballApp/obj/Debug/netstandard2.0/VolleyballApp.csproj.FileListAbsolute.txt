@@ -10,3 +10,4 @@ E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballAp
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.pdb
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.csprojResolveAssemblyReference.cache
+E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.GameStatisticsPage.xaml.g.cs

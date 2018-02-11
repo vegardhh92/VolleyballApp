@@ -30,5 +30,10 @@ namespace VolleyballApp
         {
             Navigation.PushAsync(new TeamPage());
         }
-	}
+        private void Statistics_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GameStatisticsPage());
+        }
+
+    }
 }

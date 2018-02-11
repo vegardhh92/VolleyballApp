@@ -9,6 +9,7 @@
         <Button Text="New Game" Clicked="New_Game_Clicked"/>
         <Button Text="Archive" Clicked="Archive_Clicked"/>
         <Button Text="Team" Clicked="Team_Clicked"/>
+        <Button Text="Test for statistics" Clicked="Statistics_Clicked"/>
     </StackLayout>
 
 </ContentPage>
