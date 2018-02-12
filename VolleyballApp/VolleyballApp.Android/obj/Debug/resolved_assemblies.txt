@@ -70,8 +70,8 @@ E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballAp
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Web.Services.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Xml.XPath.XDocument.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.ComponentModel.dll
-E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.ObjectModel.dll
+E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.IO.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 E:\Dokumenter\Skole\V2018\DAT153\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\android\assets\System.Text.RegularExpressions.dll

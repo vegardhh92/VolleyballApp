@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VolleyballApp.GameStatisticsPage"
              Title="Statistics">
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="headerLabel" TargetType="Label">
                 <Setter Property="BackgroundColor" Value="White"/>
@@ -11,8 +11,9 @@
                 <Setter Property="FontSize" Value="40" />
             </Style>
         </ResourceDictionary>
-    </ContentPage.Resources>
-    <Grid x:Name="schemaGrid" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
+    </ContentPage.Resources> -->
+    <Grid x:Name="schemaGrid"/>
+    <!--RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -27,4 +28,5 @@
         <Label Text="Block" Grid.Row="0" Grid.Column="4" Style="{StaticResource headerLabel}"/>
         <Label Text="Dig" Grid.Row="0" Grid.Column="5" Style="{StaticResource headerLabel}"/>
     </Grid>
+    -->
 </ContentPage>
