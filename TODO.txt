@@ -6,13 +6,13 @@ TODO:
 - NewGamePage:
 	- Missing
 - GameStatisticsPage:
-	- Create Table
-	- Load players from DB
-	- Fetch input from fields
+	- Create Table - DONE
+	- Load players from DB - DONE
+	- Fetch input from fields 
 	- Save to DB
 
 - General:
-	- SQLite file path for windows
+	- SQLite file path for windows - DONE
 	- Added forced landscape mode for app.
 		 VolleyballApp.Android -> MainActivity -> line 12 -> 
 			ScreenOrientation =ScreenOrientation.Landscape
