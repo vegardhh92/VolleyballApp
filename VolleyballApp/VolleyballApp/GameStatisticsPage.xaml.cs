@@ -12,16 +12,16 @@ namespace VolleyballApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GameStatisticsPage : ContentPage
 	{
-		public GameStatisticsPage ()
+        public PlayerDatabase playerDatabase;
+        public Player player;
+        public GameStatisticsPage ()
 		{
 			InitializeComponent ();
 
-            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.DB_PATH))
-            {
-                conn.CreateTable<Player>();
-                var players = conn.Table<Player>().ToList();
-                
-            
+            playerDatabase = new PlayerDatabase();
+            var players = playerDatabase.GetPlayers();
+            players.ToList();
+
             BackgroundColor = Color.Black;
 
             var headerLabelStyle = new Style(typeof(Label))
@@ -77,9 +77,9 @@ namespace VolleyballApp
 
                 int colNr = 0;
                 int rowNr = 1;
-                for (int i = 0; i<players.Count; i++)
+                for (int i = 0; i < players.Count(); i++)
                 {
-                    string pName = players[i].name;
+                string pName = players.ToList()[i].Name;
                     controlGrid.Children.Add(new Label { Text = pName, Style = nameLabelStyle }, colNr, rowNr);
                     colNr++;
                     while(colNr < 6)
@@ -94,12 +94,12 @@ namespace VolleyballApp
                 
 
             Content = controlGrid;
-            }
+            
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            /*
+          /*
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.DB_PATH))
             {
                 conn.CreateTable<Player>();
@@ -107,7 +107,7 @@ namespace VolleyballApp
 
                 var gridController = new Grid();
             }
-            */
+           */
         }
     }
 }

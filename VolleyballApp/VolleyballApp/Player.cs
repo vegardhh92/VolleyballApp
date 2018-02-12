@@ -5,12 +5,17 @@ using System.Text;
 
 namespace VolleyballApp
 {
-    class Player
+    public class Player
     {
-        [PrimaryKey]
-        public int number { get; set; }
-        public string name { get; set; }
-        public string position { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public int Number { get; set; }
+        public string Name { get; set; }
+        public string Position { get; set; }
 
+        public Player()
+        {
+        }
     }
+   
 }

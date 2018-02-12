@@ -24,7 +24,7 @@
             --> 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding name}"  Detail="{Binding position}"/>
+                    <TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
