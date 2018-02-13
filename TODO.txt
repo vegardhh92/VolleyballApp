@@ -8,7 +8,9 @@ TODO:
 - GameStatisticsPage:
 	- Create Table - DONE
 	- Load players from DB - DONE
+	- Add buttons for input
 	- Fetch input from fields 
+	- add end game button - add set scores
 	- Save to DB
 
 - General:

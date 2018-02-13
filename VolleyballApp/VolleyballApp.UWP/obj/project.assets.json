@@ -7322,24 +7322,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vegar_000\\.nuget\\packages\\": {},
+    "C:\\Users\\141459\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
       "projectName": "VolleyballApp.UWP",
-      "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
-      "packagesPath": "C:\\Users\\vegar_000\\.nuget\\packages\\",
-      "outputPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\obj\\",
+      "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
+      "packagesPath": "C:\\Users\\141459\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\vegar_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\141459\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -7353,8 +7353,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
-              "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
+            "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
+              "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
             }
           }
         }

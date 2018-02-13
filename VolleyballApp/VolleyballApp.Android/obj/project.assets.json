@@ -934,24 +934,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vegar_000\\.nuget\\packages\\": {},
+    "C:\\Users\\141459\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
       "projectName": "VolleyballApp.Android",
-      "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
-      "packagesPath": "C:\\Users\\vegar_000\\.nuget\\packages\\",
-      "outputPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\obj\\",
+      "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\VolleyballApp.Android.csproj",
+      "packagesPath": "C:\\Users\\141459\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\vegar_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\141459\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -965,8 +965,8 @@
       "frameworks": {
         "monoandroid71": {
           "projectReferences": {
-            "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
-              "projectPath": "E:\\Dokumenter\\Skole\\V2018\\DAT153\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
+            "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
+              "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
             }
           }
         }
