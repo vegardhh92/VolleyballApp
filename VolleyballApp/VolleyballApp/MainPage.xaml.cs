@@ -18,7 +18,7 @@ namespace VolleyballApp
 
         private void New_Game_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Success", "Clicked on New Game", "Great");
+            Navigation.PushAsync(new NewGamePage());
         }
 
         private void Archive_Clicked(object sender, EventArgs e)

@@ -1,32 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VolleyballApp.TeamPage">
-
-    <StackLayout Margin="10,10,10,0">
-        <Entry x:Name="numberEntry" Placeholder="Player number"/>
-        <Entry x:Name="nameEntry" Placeholder="Player name" />
-        <Picker x:Name="positionEntry" Title="Select player position">
-            <Picker.Items>
-                <x:String>Setter</x:String>
-                <x:String>Libero</x:String>
-                <x:String>Outside hitter</x:String>
-                <x:String>Opposite hitter</x:String>
-                <x:String>Middle blocker</x:String>
-            </Picker.Items>
-        </Picker>
-        <Button Text="Save" Clicked="Save_Button_Clicked"/>
-        <Label Text="My team"/>
-        <ListView x:Name="teamMembersListView">
-            <!--   IsPullToRefreshEnabled="true" 
-                  RefreshCommand="{Binding RefreshCommand}"
-                  IsRefreshing="{Binding IsBusy}">
-            --> 
-            <ListView.ItemTemplate>
-                <DataTemplate>
+             x:Class="VolleyballApp.TeamPage"
+             Title="My team">
+    <ScrollView>
+        <StackLayout Margin="10,10,10,0">
+            <Label Text="Add New Team Members" FontSize="20" FontFamily="Bold"/>
+            <Entry x:Name="numberEntry" Placeholder="Player number"/>
+            <Entry x:Name="nameEntry" Placeholder="Player name" />
+            <Picker x:Name="positionEntry" Title="Select player position">
+                 <Picker.Items>
+                    <x:String>Setter</x:String>
+                    <x:String>Libero</x:String>
+                    <x:String>Outside hitter</x:String>
+                    <x:String>Opposite hitter</x:String>
+                    <x:String>Middle blocker</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Save" Clicked="Save_Button_Clicked"/>
+            <Label Text="My Team Members"  FontSize="20" FontFamily="Bold"/>
+            <ListView x:Name="teamMembersListView">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
                     <TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+         </StackLayout>
+    </ScrollView>
 </ContentPage>
