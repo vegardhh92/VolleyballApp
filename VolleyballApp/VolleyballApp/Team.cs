@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VolleyballApp
 {
-    class Team
+    public class Team
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }

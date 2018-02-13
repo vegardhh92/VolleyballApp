@@ -97,7 +97,7 @@ namespace VolleyballApp
                     rowNr++;
                 }      
 
-            Content = controlGrid;
+           Content = controlGrid;
             
         }
         protected override void OnAppearing()

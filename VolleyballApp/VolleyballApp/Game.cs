@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace VolleyballApp
 {
-    class Game
+    public class Game
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
