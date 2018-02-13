@@ -31,7 +31,7 @@ namespace VolleyballApp
                 {
                     new Setter{Property = Label.BackgroundColorProperty, Value = Color.White},
                     new Setter {Property = Label.TextColorProperty, Value = Color.Black},
-                    new Setter{Property = Label.FontSizeProperty, Value = 40}
+                    new Setter{Property = Label.FontSizeProperty, Value = 20}
                 }
             };
             //Style for labels
@@ -41,7 +41,7 @@ namespace VolleyballApp
                 {
                     new Setter{Property = Label.BackgroundColorProperty, Value = Color.White},
                     new Setter {Property = Label.TextColorProperty, Value = Color.Black},
-                    new Setter{Property = Label.FontSizeProperty, Value = 30}
+                    new Setter{Property = Label.FontSizeProperty, Value = 20}
                 }
             };
             //Style for entry

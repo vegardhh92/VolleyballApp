@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace VolleyballApp
@@ -8,6 +9,7 @@ namespace VolleyballApp
     {
         public PlayerDatabase playerDatabase;
         public Player player;
+        ObservableCollection<Player> playersObs = new ObservableCollection<Player>();
 
         public TeamPage()
         {
@@ -24,14 +26,19 @@ namespace VolleyballApp
             player.Name = nameEntry.Text;
             player.Position = positionEntry.Items[positionEntry.SelectedIndex];
             playerDatabase.AddPlayer(player);
+            playersObs.Add(player);
+            teamMembersListView.ItemsSource = playersObs;
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
+/*
             playerDatabase = new PlayerDatabase();
             var players = playerDatabase.GetPlayers();
+            
             teamMembersListView.ItemsSource = players;
+
          /*  
             using(SQLite.SQLiteConnection conn  = new SQLite.SQLiteConnection(App.DB_PATH))
             {
