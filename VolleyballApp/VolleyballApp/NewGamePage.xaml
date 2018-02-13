@@ -13,7 +13,7 @@
             <BoxView VerticalOptions="Center"
                      HorizontalOptions="Center"
                      HeightRequest="1"
-                     WidthRequest="50"
+                     WidthRequest="100"
                      Color="DarkGray" 
                      Margin="10,10,10,10"/>
             <Label Text="Teams"
@@ -21,16 +21,22 @@
                    FontSize="Large"/>
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="homeTeamEntry" 
-                       HorizontalOptions="StartAndExpand"
+                       HorizontalOptions="EndAndExpand"
                        WidthRequest="100"
                        Placeholder="Home" />
                 <Label Text="vs" 
                        FontSize="Medium" />
                 <Entry x:Name="awayTeamEntry" 
-                       HorizontalOptions="EndAndExpand"
+                       HorizontalOptions="StartAndExpand"
                        WidthRequest="100"
                        Placeholder="Away" />
             </StackLayout>
+        <BoxView VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 HeightRequest="1"
+                 WidthRequest="100"
+                 Color="DarkGray" 
+                 Margin="10,10,10,10"/>
         <Button Text="Ok" Clicked="SubmitNewGame" />
     </StackLayout>
         

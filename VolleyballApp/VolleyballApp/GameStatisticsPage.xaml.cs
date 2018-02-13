@@ -14,6 +14,8 @@ namespace VolleyballApp
 	{
         public PlayerDatabase playerDatabase;
         public Player player;
+        public Grid controlGrid;
+
         public GameStatisticsPage ()
 		{
 			InitializeComponent ();
@@ -23,7 +25,9 @@ namespace VolleyballApp
             players.ToList();
 
             //Setting backgroundcolor for mocking borders in our table
-            BackgroundColor = Color.Black;
+            BackgroundColor = Color.DodgerBlue;
+
+            var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
 
             var headerLabelStyle = new Style(typeof(Label))
             {
@@ -56,7 +60,7 @@ namespace VolleyballApp
                 };
 
             //Setting up grid row and column definitions
-                var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
+           
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
@@ -83,6 +87,8 @@ namespace VolleyballApp
             //Dynamically adding players from database and adding entry cells to the grid for each player
                 int colNr = 0;
                 int rowNr = 1;
+            
+
                 for (int i = 0; i < players.Count(); i++)
                 {
                 string pName = players.ToList()[i].Name;
@@ -90,16 +96,40 @@ namespace VolleyballApp
                     colNr++;
                     while(colNr < 6)
                     {
-                        controlGrid.Children.Add(new Entry { Style = entryStyle }, colNr, rowNr);
+                    
+                        controlGrid.Children.Add(new Entry { Style = entryStyle}, colNr, rowNr);
                         colNr++;
                     }
                     colNr = 0;
                     rowNr++;
-                }      
+                }
+            Button endGame = new Button();
+            endGame.Text = "End Game";
+            endGame.Clicked += EndGame_Clicked;
+            controlGrid.Children.Add(endGame, 5, rowNr);
+
 
            Content = controlGrid;
             
         }
+
+        private void EndGame_Clicked(object sender, EventArgs e)
+        {
+            string myTEXT = "";
+/*
+
+            View view = controlGrid.Children.FirstOrDefault(v => Grid.GetRow(v) == 2 && Grid.GetColumn(v) == 2);
+            if (view is Entry entry)
+            {
+                myTEXT = entry.Text;
+            }
+            else
+                myTEXT = "FAIL";
+         
+            DisplayAlert("TEST", myTEXT, "OK");
+            */
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
