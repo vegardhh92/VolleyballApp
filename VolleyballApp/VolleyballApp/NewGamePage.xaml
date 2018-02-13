@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolleyballApp.NewGamePage">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <Label Text="Date"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+            <DatePicker x:Name="gameDate" 
+                        HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     HeightRequest="1"
+                     WidthRequest="50"
+                     Color="DarkGray" 
+                     Margin="10,10,10,10"/>
+            <Label Text="Teams"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="homeTeamEntry" 
+                       HorizontalOptions="StartAndExpand"
+                       WidthRequest="100"
+                       Placeholder="Home" />
+                <Label Text="vs" 
+                       FontSize="Medium" />
+                <Entry x:Name="awayTeamEntry" 
+                       HorizontalOptions="EndAndExpand"
+                       WidthRequest="100"
+                       Placeholder="Away" />
+            </StackLayout>
+        </StackLayout>
+        <Button Text="Ok" Clicked="SubmitNewGame" />
+    </ContentPage.Content>
+</ContentPage>
