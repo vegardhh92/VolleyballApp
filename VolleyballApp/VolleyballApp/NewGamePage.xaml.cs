@@ -27,14 +27,13 @@ namespace VolleyballApp
             awayTeam = new Team();
             game = new Game();
 
-            homeTeam.Name = homeTeamEntry.Text;
-            awayTeam.Name = awayTeamEntry.Text;
+      
+            string home = homeTeamEntry.Text;
+            string away = awayTeamEntry.Text;
+            DateTime gameDate2 = gameDate.Date;
 
-            game.Date = gameDate.Date;
-            game.HomeTeam = homeTeam;
-            game.AwayTeam = awayTeam;
 
-            DisplayAlert("Success", game.HomeTeam.ToString() + " vs. " + game.AwayTeam.ToString() + " at " + game.Date.ToString(), "Great");
+            DisplayAlert("Success", home + " vs. " + away + " at " + gameDate2.ToString(), "Great");
         }
     }
 }

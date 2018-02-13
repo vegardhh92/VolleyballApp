@@ -10,8 +10,9 @@ namespace VolleyballApp
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public DateTime Date { get; set; }
-        public Team HomeTeam { get; set; }
-        public Team AwayTeam { get; set; }
+        public List<string>Teams { get; set; }
+        public List<string> GameScore { get; set; }
+        public List<string> SetScores { get; set; }
 
         public Game()
         {
