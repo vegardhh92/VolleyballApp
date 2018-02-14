@@ -55,7 +55,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -65,8 +64,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -246,7 +243,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -256,8 +252,6 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -468,7 +462,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -478,8 +471,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -660,7 +651,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -682,8 +672,6 @@
           "lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -1078,7 +1066,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -1088,8 +1075,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -1270,7 +1255,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -1292,8 +1276,6 @@
           "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
@@ -1689,7 +1671,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -1699,8 +1680,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -1881,7 +1860,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -1903,8 +1881,6 @@
           "lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -2299,7 +2275,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -2309,8 +2284,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -2491,7 +2464,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -2513,8 +2485,6 @@
           "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -2910,7 +2880,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -2920,8 +2889,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -3102,7 +3069,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -3124,8 +3090,6 @@
           "lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -3520,7 +3484,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -3530,8 +3493,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
@@ -3712,7 +3673,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-<<<<<<< HEAD
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -3734,8 +3694,6 @@
           "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
         }
       },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
@@ -6053,7 +6011,6 @@
         "version.txt"
       ]
     },
-<<<<<<< HEAD
     "Microsoft.NETCore.Targets/1.1.0": {
       "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
@@ -6070,11 +6027,6 @@
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
       "sha512": "ieBIGwT7GnEIdlvx4Sg8fmpQ6Q7ZwkxOD1JcuWICtBsgrKsJAdu2WhnSd+GeCMenqfV+Z2ggAKGQUqE81EhCAw==",
       "type": "package",
-=======
-    "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
-      "sha512": "ieBIGwT7GnEIdlvx4Sg8fmpQ6Q7ZwkxOD1JcuWICtBsgrKsJAdu2WhnSd+GeCMenqfV+Z2ggAKGQUqE81EhCAw==",
-      "type": "package",
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "path": "microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
@@ -6487,7 +6439,6 @@
         "lib/netstandard1.0/_._"
       ]
     },
-<<<<<<< HEAD
     "Newtonsoft.Json/9.0.1": {
       "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
@@ -6550,8 +6501,6 @@
         "runtimes/aot/lib/netcore50/System.Runtime.dll"
       ]
     },
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
       "sha512": "avtC8VVfL3vYwCzsbbHfzKkhuIFGS+D7c2gOFNal3UGIdPJ20qc+1oOQxNL+9QxO49xCAhGELf6o05Nj8YchSw==",
       "type": "package",
@@ -8086,34 +8035,31 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.7",
-<<<<<<< HEAD
       "SQLiteNetExtensionsCore >= 2.0.0",
       "System.Runtime >= 4.3.0",
-=======
->>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
       "VolleyballApp >= 1.0.0",
       "Xamarin.Forms >= 2.5.0.122203"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\141459\\.nuget\\packages\\": {},
+    "C:\\Users\\142552\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
       "projectName": "VolleyballApp.UWP",
-      "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
-      "packagesPath": "C:\\Users\\141459\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\obj\\",
+      "projectPath": "C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\VolleyballApp.UWP.csproj",
+      "packagesPath": "C:\\Users\\142552\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\141459\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\142552\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -8127,8 +8073,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
-              "projectPath": "C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
+            "C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj": {
+              "projectPath": "C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp\\VolleyballApp.csproj"
             }
           }
         }

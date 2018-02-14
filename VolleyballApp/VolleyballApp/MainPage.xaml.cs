@@ -23,7 +23,8 @@ namespace VolleyballApp
 
         private void Archive_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Success", "Clicked on Archive", "Great");
+            //DisplayAlert("Success", "Clicked on Archive", "Great");
+            Navigation.PushAsync(new ArchivePage());
         }
 
         private void Team_Clicked(object sender, EventArgs e)
