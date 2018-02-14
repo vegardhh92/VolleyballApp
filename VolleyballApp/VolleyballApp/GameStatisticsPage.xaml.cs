@@ -13,7 +13,11 @@ namespace VolleyballApp
 	public partial class GameStatisticsPage : ContentPage
 	{
         public db.Database playerDatabase;
+<<<<<<< HEAD
 
+=======
+        public db.Player player;
+>>>>>>> a1f272931ca913030c2d7062b054005b2f4008cb
         public Grid controlGrid;
         public List<Entry> myEntryList;
 
