@@ -1,10 +1,11 @@
 TODO:
 
 - TeamPage:
-	- Fix listlayout
-	- Try to fix refreshcommand
+	- Fix listlayout - DONE
+	- Try to fix refreshcommand - another solution - DONE
 - NewGamePage:
-	- Missing
+	- Missing - ADDED
+	- Fix DB stuff
 - GameStatisticsPage:
 	- Create Table - DONE
 	- Load players from DB - DONE
@@ -12,6 +13,12 @@ TODO:
 	- Fetch input from fields 
 	- add end game button - add set scores
 	- Save to DB
+	- Fix ugly background color
+	- fix button for sumit color
+
+- Fix project map structure
+- Add helperclass for text validators
+
 
 - General:
 	- SQLite file path for windows - DONE

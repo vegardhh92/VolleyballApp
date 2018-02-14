@@ -14,6 +14,9 @@ namespace VolleyballApp
 	{
         public PlayerDatabase playerDatabase;
         public Player player;
+        public Grid controlGrid;
+        public List<Entry> myEntryList;
+
         public GameStatisticsPage ()
 		{
 			InitializeComponent ();
@@ -21,9 +24,11 @@ namespace VolleyballApp
             playerDatabase = new PlayerDatabase();
             var players = playerDatabase.GetPlayers();
             players.ToList();
-
+            myEntryList = new List<Entry>();
             //Setting backgroundcolor for mocking borders in our table
-            BackgroundColor = Color.Black;
+            BackgroundColor = Color.DodgerBlue;
+
+            var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
 
             var headerLabelStyle = new Style(typeof(Label))
             {
@@ -31,7 +36,7 @@ namespace VolleyballApp
                 {
                     new Setter{Property = Label.BackgroundColorProperty, Value = Color.White},
                     new Setter {Property = Label.TextColorProperty, Value = Color.Black},
-                    new Setter{Property = Label.FontSizeProperty, Value = 40}
+                    new Setter{Property = Label.FontSizeProperty, Value = 20}
                 }
             };
             //Style for labels
@@ -41,7 +46,7 @@ namespace VolleyballApp
                 {
                     new Setter{Property = Label.BackgroundColorProperty, Value = Color.White},
                     new Setter {Property = Label.TextColorProperty, Value = Color.Black},
-                    new Setter{Property = Label.FontSizeProperty, Value = 30}
+                    new Setter{Property = Label.FontSizeProperty, Value = 20}
                 }
             };
             //Style for entry
@@ -56,7 +61,7 @@ namespace VolleyballApp
                 };
 
             //Setting up grid row and column definitions
-                var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
+           
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
@@ -83,23 +88,104 @@ namespace VolleyballApp
             //Dynamically adding players from database and adding entry cells to the grid for each player
                 int colNr = 0;
                 int rowNr = 1;
+           
+
                 for (int i = 0; i < players.Count(); i++)
                 {
                 string pName = players.ToList()[i].Name;
-                    controlGrid.Children.Add(new Label { Text = pName, Style = nameLabelStyle }, colNr, rowNr);
+                    controlGrid.Children.Add(new Label  { Text = pName, Style = nameLabelStyle }, colNr, rowNr);
                     colNr++;
                     while(colNr < 6)
                     {
-                        controlGrid.Children.Add(new Entry { Style = entryStyle }, colNr, rowNr);
-                        colNr++;
-                    }
+                    string idString = pName + colNr.ToString();
+                    myEntryList.Add(
+                        new Entry{Style = entryStyle, ClassId = idString}
+                    );
+                     
+                      //  controlGrid.Children.Add(new Entry  { Style = entryStyle, ClassId= idString}, colNr, rowNr);
+                    System.Diagnostics.Debug.WriteLine(idString);
+                    colNr++;
+                }
                     colNr = 0;
                     rowNr++;
-                }      
+                }
+            rowNr = 1;
+            colNr = 1;
+            int testnumber = 0;
+            foreach (Entry e in myEntryList)
+            {
+              
+               // e.Text = "Col, Row: " + colNr + "," + rowNr;
+                //e.Text = players.ToList()[testnumber].Name;
+                System.Diagnostics.Debug.WriteLine(e.ClassId.ToString() + " in for each");
+                controlGrid.Children.Add(e, colNr, rowNr);
+                
+                colNr ++;
+
+                if (colNr == 6)
+                {
+                    System.Diagnostics.Debug.WriteLine("colNr ble 6 + ");
+                    colNr = 1;
+                    testnumber++;
+                    rowNr++;
+                }
+           
+            }
+
+            //Button for ending the game
+            Button endGame = new Button();
+            endGame.Text = "End Game";
+            endGame.Clicked += EndGame_Clicked;
+            controlGrid.Children.Add(endGame, 5, rowNr);
+            string myString = players.ToList()[1].Name;
 
            Content = controlGrid;
             
         }
+
+        private void EndGame_Clicked(object sender, EventArgs e)
+        {
+            string p1Serv;
+            string p1Reception;
+            string p1Attack;
+            string p1Block;
+            string p1Dig;
+
+             
+             Entry en = new Entry();
+             foreach (Entry someEntry in myEntryList)
+             {
+                 if (someEntry.ClassId == "Olga1")
+                 {
+                    p1Serv = someEntry.Text;
+                     DisplayAlert("IS IT WORKING?", p1Serv, "YEAH 8-)");
+                 }
+                if (someEntry.ClassId == "Olga1")
+                {
+                  
+                }
+
+
+                 else
+                 {
+                     DisplayAlert("NOTHING WORKS", "NOPE", "SORRY");
+                 }
+             }
+
+             /*
+
+                         View view = controlGrid.Children.FirstOrDefault(v => Grid.GetRow(v) == 2 && Grid.GetColumn(v) == 2);
+                         if (view is Entry entry)
+                         {
+                             myTEXT = entry.Text;
+                         }
+                         else
+                             myTEXT = "FAIL";
+
+                         DisplayAlert("TEST", myTEXT, "OK");
+                         */
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <Jars>
+<<<<<<< HEAD
     <Jar>obj\Debug\lp\0\jl\formsviewgroup.jar</Jar>
     <Jar>obj\Debug\lp\10\jl\support-annotations.jar</Jar>
     <Jar>C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\0\jl\formsviewgroup.jar</Jar>
@@ -20,6 +21,25 @@
     <Jar>C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\23\jl\bin\classes.jar</Jar>
     <Jar>C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\24\jl\bin\classes.jar</Jar>
     <Jar>C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\9\jl\bin\classes.jar</Jar>
+=======
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\0\jl\formsviewgroup.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\10\jl\support-annotations.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\11\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\12\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\13\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\14\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\15\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\16\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\17\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\18\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\19\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\20\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\21\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\22\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\23\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\24\jl\bin\classes.jar</Jar>
+    <Jar>C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\9\jl\bin\classes.jar</Jar>
+>>>>>>> 34b64c1f1711cbb0e4b3ae3f4671d07c2cfc775a
   </Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp.Android\obj\Debug\lp\2\jl\res</ResolvedResourceDirectory>
