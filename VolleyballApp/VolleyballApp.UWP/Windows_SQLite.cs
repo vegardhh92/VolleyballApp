@@ -21,6 +21,5 @@ namespace VolleyballApp.UWP
             var conn = new SQLite.SQLiteConnection(path);
             return conn;
         }
-
     }
 }

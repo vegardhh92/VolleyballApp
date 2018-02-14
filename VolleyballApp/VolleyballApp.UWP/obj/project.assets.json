@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -35,12 +35,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -55,12 +55,21 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1"
         },
         "compile": {
@@ -234,37 +243,61 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -298,7 +331,7 @@
       "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win10-arm/native/e_sqlite3.dll": {
@@ -328,6 +361,19 @@
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
+        }
+      },
       "Xamarin.Forms/2.5.0.122203": {
         "type": "package",
         "compile": {
@@ -351,8 +397,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -363,7 +409,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -396,12 +442,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -416,14 +462,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -596,14 +651,35 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -777,30 +853,54 @@
           "runtimes/win10-arm/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -837,7 +937,7 @@
           "runtimes/win10-arm/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -851,6 +951,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -876,8 +1001,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -888,7 +1013,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -921,12 +1046,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -941,14 +1066,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -1121,7 +1255,28 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.aot.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -1296,37 +1451,61 @@
           "runtimes/win10-arm-aot/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -1363,7 +1542,7 @@
           "runtimes/win10-arm/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -1377,6 +1556,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.aot.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -1402,8 +1606,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -1414,7 +1618,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -1447,12 +1651,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -1467,14 +1671,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -1647,21 +1860,42 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -1835,23 +2069,47 @@
           "runtimes/win10-x64/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -1888,7 +2146,7 @@
           "runtimes/win10-x64/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -1902,6 +2160,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -1927,8 +2210,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -1939,7 +2222,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -1972,12 +2255,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -1992,14 +2275,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -2172,14 +2464,35 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.aot.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -2354,30 +2667,54 @@
           "runtimes/win10-x64-aot/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -2414,7 +2751,7 @@
           "runtimes/win10-x64/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -2428,6 +2765,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.aot.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -2453,8 +2815,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -2465,7 +2827,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -2498,12 +2860,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -2518,14 +2880,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -2698,28 +3069,49 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.any.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -2893,16 +3285,40 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -2939,7 +3355,7 @@
           "runtimes/win10-x86/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -2953,6 +3369,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -2978,8 +3419,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -2990,7 +3431,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
-      "Microsoft.Net.Native.Compiler/2.0.2": {
+      "Microsoft.Net.Native.Compiler/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Net.Native.SharedLibrary-arm": "2.0.0",
@@ -3023,12 +3464,12 @@
           "build/Microsoft.Net.Native.SharedLibrary-x86.targets": {}
         }
       },
-      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "dependencies": {
-          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
-          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1"
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
@@ -3043,14 +3484,23 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "Microsoft.NETCore.Targets/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Net.Native.Compiler": "2.0.2",
-          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.1",
+          "Microsoft.Net.Native.Compiler": "2.0.3",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
           "NETStandard.Library": "2.0.1",
-          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6"
+          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7"
         },
         "compile": {
           "ref/uap10.0.15138/Microsoft.CSharp.dll": {},
@@ -3223,21 +3673,42 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "runtime.aot.System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Runtime.dll": {}
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
+      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
         "type": "package",
         "compile": {
           "ref/netstandard/_._": {}
@@ -3412,23 +3883,47 @@
           "runtimes/win10-x86-aot/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
-      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
         "type": "package",
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "runtime.win7.System.Private.Uri/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard/_._": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
+        }
+      },
+      "sqlite-net-standard/1.5.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
+          "lib/netstandard1.1/SQLiteNetStandard.dll": {}
+        }
+      },
+      "SQLiteNetExtensionsCore/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-standard": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -3465,7 +3960,7 @@
           "runtimes/win10-x86/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
@@ -3479,6 +3974,31 @@
         },
         "runtime": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.win7.System.Private.Uri": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard/_._": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.aot.System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netcore50/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/win8/_._": {}
         }
       },
       "Xamarin.Forms/2.5.0.122203": {
@@ -3504,8 +4024,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203",
-          "sqlite-net-pcl": "1.4.118"
+          "SQLiteNetExtensionsCore": "2.0.0",
+          "Xamarin.Forms": "2.5.0.122203"
         },
         "compile": {
           "bin/placeholder/VolleyballApp.dll": {}
@@ -3517,15 +4037,15 @@
     }
   },
   "libraries": {
-    "Microsoft.Net.Native.Compiler/2.0.2": {
-      "sha512": "+pKd52WISAWTE9JDgHDRYCfMnaNKXmqgeJQW8JQU70XoEBnYRlNU0nNRpqKw/FkfmsH7mGloIgw6DwJsiZUa8Q==",
+    "Microsoft.Net.Native.Compiler/2.0.3": {
+      "sha512": "EekTfKp3VRWglAN6MLVInKCt7Mf6tDhhilCkpYwpDTE7fey9dM+eJc8xr6TeKRHq+0hWJ6B4fFuChF2a75uCPQ==",
       "type": "package",
-      "path": "microsoft.net.native.compiler/2.0.2",
+      "path": "microsoft.net.native.compiler/2.0.3",
       "files": [
-        "Microsoft.Net.Native.Compiler.2.0.2.nupkg.sha512",
-        "Microsoft.Net.Native.Compiler.nuspec",
         "build/Microsoft.Net.Native.Compiler.props",
         "build/Microsoft.Net.Native.Compiler.targets",
+        "microsoft.net.native.compiler.2.0.3.nupkg.sha512",
+        "microsoft.net.native.compiler.nuspec",
         "tools/LibraryXML/Callisto.rd.xml",
         "tools/LibraryXML/GalaSoft.MvvmLight.Extras.Win8.rd.xml",
         "tools/LibraryXML/GalaSoft.MvvmLight.Win8.rd.xml",
@@ -5460,16 +5980,16 @@
         "tools/SharedLibrary/ret/Toc/System.Text.RegularExpressions.toc"
       ]
     },
-    "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "4ud4s7laLdE3cirfDexEkKuUyZTkYZW/U9aBwt+M6spoEPdELCxepLBd4TSSUpCLXu6b8sRiZsNJZ75PdChFTg==",
+    "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
+      "sha512": "Lgwh58rl1g15JBcRYlEZjqNrfyOxf/RCZoxiC4x9A3ssXNOUdLrQiaWEyJYfxNQppKL/qE3M2CDg67W38Fz2Yw==",
       "type": "package",
-      "path": "microsoft.net.uwpcoreruntimesdk/2.1.1",
+      "path": "microsoft.net.uwpcoreruntimesdk/2.1.2",
       "files": [
         "LICENSE.TXT",
-        "Microsoft.Net.UWPCoreRuntimeSdk.2.1.1.nupkg.sha512",
-        "Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.Net.UWPCoreRuntimeSdk.props",
+        "microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/CoreRuntime/Microsoft.Build.Net.CoreRuntimeTask.dll",
         "tools/CoreRuntime/Microsoft.Cci.dll",
         "tools/CoreRuntime/Microsoft.Net.CoreRuntime.settings.targets",
@@ -5491,15 +6011,28 @@
         "version.txt"
       ]
     },
-    "Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "T758N2M9bvyDA/9KeguVHOiUdhmAlCsmihVgKKwmf4MhnSybB8AsjwgmrCemqQVq7a6G7wffW7OkT0pSM2kNzQ==",
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
-      "path": "microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.targets.1.1.0.nupkg.sha512",
+        "microsoft.netcore.targets.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "ieBIGwT7GnEIdlvx4Sg8fmpQ6Q7ZwkxOD1JcuWICtBsgrKsJAdu2WhnSd+GeCMenqfV+Z2ggAKGQUqE81EhCAw==",
+      "type": "package",
+      "path": "microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
-        "Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
+        "microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "microsoft.netcore.universalwindowsplatform.nuspec",
         "ref/netcore50/_._",
         "ref/uap10.0.15138/Microsoft.CSharp.dll",
         "ref/uap10.0.15138/Microsoft.CSharp.xml",
@@ -5906,16 +6439,78 @@
         "lib/netstandard1.0/_._"
       ]
     },
-    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "Q4qwkiwdajYNEhVLDM7nFJDP7IMdrKpHbwI1oiJOL3d6iTV422JFfo8kbyYh8k8oOTfKfrHv/UkcIRPk9FjTbg==",
+    "Newtonsoft.Json/9.0.1": {
+      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
-      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "newtonsoft.json/9.0.1",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "runtime.any.System.Runtime/4.3.0": {
+      "sha512": "fRS7zJgaG9NkifaAxGGclDDoRn9HC7hXACl52Or06a/fxdzDajWb5wov3c6a+gVSlekRoexfjwQSK9sh5um5LQ==",
+      "type": "package",
+      "path": "runtime.any.system.runtime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.dll",
+        "lib/netstandard1.5/System.Runtime.dll",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/netstandard/_._",
+        "runtime.any.system.runtime.4.3.0.nupkg.sha512",
+        "runtime.any.system.runtime.nuspec",
+        "runtimes/aot/lib/netcore50/_._"
+      ]
+    },
+    "runtime.aot.System.Runtime/4.3.0": {
+      "sha512": "+v3ECNS5te29NRB7qhY2Ea3KKK1ACWEoGRcicbXm79HqFi7eL0IuqPpCpv43MMVUWxGcnrP8+PdktB2c2P0L0w==",
+      "type": "package",
+      "path": "runtime.aot.system.runtime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "runtime.aot.system.runtime.4.3.0.nupkg.sha512",
+        "runtime.aot.system.runtime.nuspec",
+        "runtimes/aot/lib/netcore50/System.Runtime.dll"
+      ]
+    },
+    "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "avtC8VVfL3vYwCzsbbHfzKkhuIFGS+D7c2gOFNal3UGIdPJ20qc+1oOQxNL+9QxO49xCAhGELf6o05Nj8YchSw==",
+      "type": "package",
+      "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6083,32 +6678,33 @@
         "runtimes/win10-arm-aot/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "Za4tG6DSTwIeYP++FsivMKROmXH7O3VN5aNAg5iVmACSmkEP9cF1nwVsPoGqrYmiVtWCuWbqwprBz3wpCplYew==",
+    "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
+      "sha512": "J4XdbbcvE2iUCsup3rwOsZYaohWLIuP1IW/etf0bwQ9vWCqccuHO3yAWiaWZmWn7nn53PEJ9lZTfNNAiIm/bBw==",
       "type": "package",
-      "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.1.1",
+      "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.1.2",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.2.1.1.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.nuspec",
+        "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "6y4QrQ+l0Oo6K06hWwVS+uNSLFE+tbBCuUBIaN9c3wB0DLWjn2A7rPKjBqoPBJoNK/NdeGPqR0AOXOKb+taauQ==",
+    "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "cAv6eXOf4fMCcRNZeBTITprR4Xt3w1UVYdHd2ju3a8AoSLT2TMGjnRq7OKuvkUwEhpYCyYjC1MG6dYbMQ/YBbA==",
       "type": "package",
-      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6275,16 +6871,16 @@
         "runtimes/win10-arm/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "2mHmIyGr7MdGDisXckIUdJW1DbdHqFRb1P/d1XCOvohrF4mZEU2vr6f3m8JrcI4p5JqbxQBJVAS5LCNq0+FSww==",
+    "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "ebFZQNM7+kuGUnasuUYLV9yJx9KkzuM2l1A5AbcfRCHBS8Ahtiyak3cLk8yA6xiVR06IfwvtkicSGWB7uq36BQ==",
       "type": "package",
-      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6452,32 +7048,33 @@
         "runtimes/win10-x64-aot/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "lT71dcRPLbSVHtUUBM4Kg5sUQ+zipDShjKnSeUYnlhSYYUuXYt2L76+obbinMXvr4eUvM6XwL93fI6E4HRzrOA==",
+    "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
+      "sha512": "Mj9j4vg9yIdvppce0eC8+EIhLmv3Uv3CNKi2v84Fl5zeSs26w9l2svE2LTixB5OTE/pj2p7cW2lUMHeWWm1tgg==",
       "type": "package",
-      "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.1.1",
+      "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.1.2",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.2.1.1.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.nuspec",
+        "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "KJ7TjMExpj9+k30/Zed+spk38SkMtdRyckzSKj0040WMMnnXStsU1iAATDD0h4rcTbiMdACaBlIHl3i7p98C7Q==",
+    "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "X7iEv9lXlMVmHe6D0HnWSn7ZO8rsIMjkID2M4ekfx9IllRDuLq67xIvWz71p7lyOtEN26Cq7LUa9GS2GebF7Yw==",
       "type": "package",
-      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6644,16 +7241,16 @@
         "runtimes/win10-x64/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "ULbHfUEHeo41/DBR0O9Ps57mzYApjlOZZlOJOUjc6kDHR0TLLDU0lv5eXl88M2ouhCz0OlA4Nw1Hk3w4wNGRBQ==",
+    "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "MtbgNudV3dJikzomvTd+NJdIDnjzpkWYg7mCUxG8bgswyTmrfkrkFyFndmmZSv7F1j7BAHjnfjm0s5W/VVzjeg==",
       "type": "package",
-      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -6821,32 +7418,33 @@
         "runtimes/win10-x86-aot/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "PmMz7gOHssh8MKY3jqtCAXNWHXWQQLhXUGjP/ZL8TCdB5Ba1JJHLaCzCS1pmndT84rsyDCF+Fai/nl9rn4AZSw==",
+    "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
+      "sha512": "MeYqB6D7vA9eRb2fDjN9LWTLAY+m5Ocg4SBoEtG1oLPXgfuJcUNUb+etdsid/V3j7jgr4ito60Wr8U03mmJGuA==",
       "type": "package",
-      "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.1.1",
+      "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.1.2",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.2.1.1.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.nuspec",
+        "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
         "tools/CoreRuntime/copywin32resources.exe"
       ]
     },
-    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.6": {
-      "sha512": "0KoE35RdKGERCqE6LgqJu/kmZy5YS3fttRvcfYt/FhPgzG9/ZbVZ5NfhBuXIAus1eCFQ40xQ2FifgxLhdotXLQ==",
+    "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.7": {
+      "sha512": "Lalm5ziKxvQrXV2WaGuM8BhO609wjiqzOygxPlOF8FCxel6brkOVlsIf9/5o0q6j7vXyiqUWjYLbjOy2iav5qA==",
       "type": "package",
-      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.0.6",
+      "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.0.7",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.6.0.6.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.0.7.nupkg.sha512",
+        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -7013,20 +7611,39 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "sqlite-net-pcl/1.4.118": {
-      "sha512": "66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
+    "runtime.win7.System.Private.Uri/4.3.0": {
+      "sha512": "Q+IBgaPYicSQs2tBlmXqbS25c/JLIthWrgrpMwxKSOobW/OqIMVFruUGfuaz4QABVzV8iKdCAbN7APY7Tclbnw==",
       "type": "package",
-      "path": "sqlite-net-pcl/1.4.118",
+      "path": "runtime.win7.system.private.uri/4.3.0",
       "files": [
-        "lib/netstandard1.1/SQLite-net.deps.json",
-        "lib/netstandard1.1/SQLite-net.dll",
-        "lib/netstandard1.1/SQLite-net.pdb",
-        "lib/netstandard1.1/SQLite-net.xml",
-        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
-        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.pdb",
-        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
-        "sqlite-net-pcl.1.4.118.nupkg.sha512",
-        "sqlite-net-pcl.nuspec"
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
+        "runtime.win7.system.private.uri.nuspec",
+        "runtimes/aot/lib/netcore50/System.Private.Uri.dll",
+        "runtimes/win/lib/netcore50/System.Private.Uri.dll",
+        "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
+      ]
+    },
+    "sqlite-net-standard/1.5.1": {
+      "sha512": "AuMmN/pIgLmvPt+DN536+HeVii0Zza6lHeQ06DT1ETuxn/5uQdEDOu9VE00FT8UyvgUgixa7riIMMxxzPm83CQ==",
+      "type": "package",
+      "path": "sqlite-net-standard/1.5.1",
+      "files": [
+        "lib/netstandard1.1/SQLiteNetStandard.dll",
+        "sqlite-net-standard.1.5.1.nupkg.sha512",
+        "sqlite-net-standard.nuspec"
+      ]
+    },
+    "SQLiteNetExtensionsCore/2.0.0": {
+      "sha512": "jPH+jECiIhClxdV0qw4ISwz2AGWj6YtQCAwqnZ0BJuovlII+nnr8KgTVp7I/s5IlAL8q/wRqaKD6A0bSv3bJHw==",
+      "type": "package",
+      "path": "sqlitenetextensionscore/2.0.0",
+      "files": [
+        "lib/netstandard1.5/SQLiteNetExtensions.dll",
+        "sqlitenetextensionscore.2.0.0.nupkg.sha512",
+        "sqlitenetextensionscore.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.5": {
@@ -7119,6 +7736,108 @@
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.5.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.uwp10.nuspec"
+      ]
+    },
+    "System.Private.Uri/4.3.0": {
+      "sha512": "I4SwANiUGho1esj4V4oSlPllXjzCZDE+5XXso2P03LW2vOda2Enzh8DWOxwN6hnrJyp314c7KuVu31QYhRzOGg==",
+      "type": "package",
+      "path": "system.private.uri/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "ref/netstandard/_._",
+        "system.private.uri.4.3.0.nupkg.sha512",
+        "system.private.uri.nuspec"
+      ]
+    },
+    "System.Runtime/4.3.0": {
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "type": "package",
+      "path": "system.runtime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.dll",
+        "lib/portable-net45+win8+wp80+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.xml",
+        "ref/netcore50/de/System.Runtime.xml",
+        "ref/netcore50/es/System.Runtime.xml",
+        "ref/netcore50/fr/System.Runtime.xml",
+        "ref/netcore50/it/System.Runtime.xml",
+        "ref/netcore50/ja/System.Runtime.xml",
+        "ref/netcore50/ko/System.Runtime.xml",
+        "ref/netcore50/ru/System.Runtime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.0/System.Runtime.dll",
+        "ref/netstandard1.0/System.Runtime.xml",
+        "ref/netstandard1.0/de/System.Runtime.xml",
+        "ref/netstandard1.0/es/System.Runtime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.xml",
+        "ref/netstandard1.0/it/System.Runtime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.2/System.Runtime.dll",
+        "ref/netstandard1.2/System.Runtime.xml",
+        "ref/netstandard1.2/de/System.Runtime.xml",
+        "ref/netstandard1.2/es/System.Runtime.xml",
+        "ref/netstandard1.2/fr/System.Runtime.xml",
+        "ref/netstandard1.2/it/System.Runtime.xml",
+        "ref/netstandard1.2/ja/System.Runtime.xml",
+        "ref/netstandard1.2/ko/System.Runtime.xml",
+        "ref/netstandard1.2/ru/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.3/System.Runtime.dll",
+        "ref/netstandard1.3/System.Runtime.xml",
+        "ref/netstandard1.3/de/System.Runtime.xml",
+        "ref/netstandard1.3/es/System.Runtime.xml",
+        "ref/netstandard1.3/fr/System.Runtime.xml",
+        "ref/netstandard1.3/it/System.Runtime.xml",
+        "ref/netstandard1.3/ja/System.Runtime.xml",
+        "ref/netstandard1.3/ko/System.Runtime.xml",
+        "ref/netstandard1.3/ru/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.5/System.Runtime.dll",
+        "ref/netstandard1.5/System.Runtime.xml",
+        "ref/netstandard1.5/de/System.Runtime.xml",
+        "ref/netstandard1.5/es/System.Runtime.xml",
+        "ref/netstandard1.5/fr/System.Runtime.xml",
+        "ref/netstandard1.5/it/System.Runtime.xml",
+        "ref/netstandard1.5/ja/System.Runtime.xml",
+        "ref/netstandard1.5/ko/System.Runtime.xml",
+        "ref/netstandard1.5/ru/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.xml",
+        "ref/portable-net45+win8+wp80+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.nuspec"
       ]
     },
     "Xamarin.Forms/2.5.0.122203": {
@@ -7315,10 +8034,11 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.6",
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.7",
+      "SQLiteNetExtensionsCore >= 2.0.0",
+      "System.Runtime >= 4.3.0",
       "VolleyballApp >= 1.0.0",
-      "Xamarin.Forms >= 2.5.0.122203",
-      "sqlite-net-pcl >= 1.4.118"
+      "Xamarin.Forms >= 2.5.0.122203"
     ]
   },
   "packageFolders": {
@@ -7365,15 +8085,19 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
-            "version": "[6.0.6, )"
+            "version": "[6.0.7, )"
+          },
+          "SQLiteNetExtensionsCore": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "System.Runtime": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[2.5.0.122203, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.4.118, )"
           }
         },
         "imports": [

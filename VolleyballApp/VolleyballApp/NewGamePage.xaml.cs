@@ -12,28 +12,34 @@ namespace VolleyballApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class NewGamePage : ContentPage
 	{
-        public Team homeTeam;
-        public Team awayTeam;
-        public Game game;
+        public db.Database database;
 
         public NewGamePage ()
 		{
 			InitializeComponent ();
+
+            database = new db.Database();
 		}
 
         public void SubmitNewGame(Object o, EventArgs e)
         {
-            homeTeam = new Team();
-            awayTeam = new Team();
-            game = new Game();
+            database.AddGame(new db.Game()
+            {
+                HomeTeam = homeTeamEntry.Text,
+                AwayTeam = awayTeamEntry.Text,
+                Date = gameDate.Date
+            });
 
-      
-            string home = homeTeamEntry.Text;
-            string away = awayTeamEntry.Text;
-            DateTime gameDate2 = gameDate.Date;
+            DisplayAlert("Info!", database.GetLastGame().ToString, "Ok");
 
+            ClearFields();
+        }
 
-            DisplayAlert("Success", home + " vs. " + away + " at " + gameDate2.ToString(), "Great");
+        public void ClearFields()
+        {
+            homeTeamEntry.Text = "";
+            awayTeamEntry.Text = "";
+            gameDate.Date = DateTime.Now;
         }
     }
 }
