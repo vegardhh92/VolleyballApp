@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+<<<<<<< HEAD
     <SelectedDevice>Android_Accelerated_x86_Nougat</SelectedDevice>
     <DefaultDevice>Android_Accelerated_x86_Nougat</DefaultDevice>
+=======
+    <SelectedDevice>Tablet_nexus_10</SelectedDevice>
+    <DefaultDevice>Tablet_nexus_10</DefaultDevice>
+>>>>>>> a6e8a894d27804ab65ed8f22349b9e71d0808fa5
   </PropertyGroup>
 </Project>
