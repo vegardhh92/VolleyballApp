@@ -8,22 +8,22 @@ namespace VolleyballApp
     //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TeamPage : ContentPage
     {
-        public PlayerDatabase playerDatabase;
-        public Player player;
-        ObservableCollection<Player> playersObs = new ObservableCollection<Player>();
+        public db.Database playerDatabase;
+        public db.Player player;
+        ObservableCollection<db.Player> playersObs = new ObservableCollection<db.Player>();
 
         public TeamPage()
         {
             InitializeComponent();
 
             //Fetching players from database
-            playerDatabase = new PlayerDatabase();
+            playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
             players.ToList();
 
             for (int i = 0; i < players.Count(); i++)
             {
-                Player p = new Player();
+                db.Player p = new db.Player();
                 p = players.ToList()[i];
                 playersObs.Add(p);
             }
@@ -34,9 +34,9 @@ namespace VolleyballApp
         {
             string numberFromInput = numberEntry.Text;
 
-            player = new Player();
+            player = new db.Player();
 
-            playerDatabase = new PlayerDatabase();
+            playerDatabase = new db.Database();
             player.Number = Convert.ToInt32(numberFromInput);
             player.Name = nameEntry.Text;
             player.Position = positionEntry.Items[positionEntry.SelectedIndex];

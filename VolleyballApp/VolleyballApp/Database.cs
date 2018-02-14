@@ -20,6 +20,11 @@ namespace db
         public int Number { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }
+        public string ServStats { get; set; }
+        public string ReceptionStats { get; set; }
+        public string AttackStats { get; set; }
+        public string BlockStats { get; set; }
+        public string DigStats { get; set; }
 
         public Player() { }
     }

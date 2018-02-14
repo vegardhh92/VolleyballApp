@@ -12,7 +12,7 @@ namespace VolleyballApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class GameStatisticsPage : ContentPage
 	{
-        public PlayerDatabase playerDatabase;
+        public db.Database playerDatabase;
         public Player player;
         public Grid controlGrid;
         public List<Entry> myEntryList;
@@ -21,7 +21,7 @@ namespace VolleyballApp
 		{
 			InitializeComponent ();
             //Fetching players from database
-            playerDatabase = new PlayerDatabase();
+            playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
             players.ToList();
             myEntryList = new List<Entry>();
@@ -137,7 +137,7 @@ namespace VolleyballApp
             endGame.Text = "End Game";
             endGame.Clicked += EndGame_Clicked;
             controlGrid.Children.Add(endGame, 5, rowNr);
-            string myString = players.ToList()[1].Name;
+            string myString = players.ToList()[0].Name;
 
            Content = controlGrid;
             
@@ -145,6 +145,9 @@ namespace VolleyballApp
 
         private void EndGame_Clicked(object sender, EventArgs e)
         {
+            playerDatabase = new db.Database();
+            var players = playerDatabase.GetPlayers();
+            players.ToList();
             string p1Serv;
             string p1Reception;
             string p1Attack;
@@ -158,6 +161,9 @@ namespace VolleyballApp
                  if (someEntry.ClassId == "Olga1")
                  {
                     p1Serv = someEntry.Text;
+                    db.Player p = players.ToList()[0];
+                    p.ServStats = p1Serv;
+                    playerDatabase.UpdatePlayer(p);
                      DisplayAlert("IS IT WORKING?", p1Serv, "YEAH 8-)");
                  }
                 if (someEntry.ClassId == "Olga1")

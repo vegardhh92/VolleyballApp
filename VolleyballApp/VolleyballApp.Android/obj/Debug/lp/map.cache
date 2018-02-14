@@ -1,5 +1,7 @@
 FormsViewGroup
-SQLite-net
+Newtonsoft.Json
+SQLiteNetExtensions
+SQLiteNetStandard
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
 SQLitePCLRaw.core
@@ -27,9 +29,3 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-netstandard
-System.ComponentModel
-System.Reflection.Extensions
-Newtonsoft.Json
-SQLiteNetExtensions
-SQLiteNetStandard
