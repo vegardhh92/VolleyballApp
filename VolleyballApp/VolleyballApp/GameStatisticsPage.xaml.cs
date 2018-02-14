@@ -13,7 +13,7 @@ namespace VolleyballApp
 	public partial class GameStatisticsPage : ContentPage
 	{
         public db.Database playerDatabase;
-        public Player player;
+
         public Grid controlGrid;
         public List<Entry> myEntryList;
 
@@ -147,49 +147,89 @@ namespace VolleyballApp
         {
             playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
-            players.ToList();
-            string p1Serv;
-            string p1Reception;
-            string p1Attack;
-            string p1Block;
-            string p1Dig;
-
-             
-             Entry en = new Entry();
-             foreach (Entry someEntry in myEntryList)
+           List<db.Player> pList =  players.ToList();
+            /*           string Serv;
+                       string Reception;
+                       string Attack;
+                       string Block;
+                       string Dig;
+           */
+            /*
+             int counter = 0;
+             string classIdString = "";
+              for(int numb = 0; 0<players.ToList().Count(); numb++)
              {
-                 if (someEntry.ClassId == "Olga1")
-                 {
-                    p1Serv = someEntry.Text;
-                    db.Player p = players.ToList()[0];
-                    p.ServStats = p1Serv;
-                    playerDatabase.UpdatePlayer(p);
-                     DisplayAlert("IS IT WORKING?", p1Serv, "YEAH 8-)");
-                 }
-                if (someEntry.ClassId == "Olga1")
-                {
-                  
-                }
 
-
-                 else
+                 classIdString = players.ToList()[numb].Name + counter;
+                 db.Player p = players.ToList()[numb];
+               //  Entry entry = new Entry();
+                 foreach(Entry myEntry in myEntryList)
                  {
-                     DisplayAlert("NOTHING WORKS", "NOPE", "SORRY");
+                     if(myEntry.ClassId == classIdString)
+                     {
+                         string text = myEntry.Text;
+                         if (counter == 0)
+                         {
+                             p.ServStats = text;
+                             System.Diagnostics.Debug.WriteLine("save this to players serv stats: " + text);
+                             playerDatabase.UpdatePlayer(p);
+
+                         }
+                         else if (counter == 1)
+                         {
+                             p.ReceptionStats = text;
+                             playerDatabase.UpdatePlayer(p);
+                         }
+                         else if (counter == 2)
+                         {
+                             p.AttackStats = text;
+                             playerDatabase.UpdatePlayer(p);
+                         }
+                         else if (counter == 3)
+                         {
+                             p.AttackStats = text;
+                             playerDatabase.UpdatePlayer(p);
+                         }
+                         else if (counter == 4)
+                         {
+                             p.BlockStats = text;
+                             playerDatabase.UpdatePlayer(p);
+                         }
+                         else if (counter == 5)
+                         {
+                             p.DigStats = text;
+                             playerDatabase.UpdatePlayer(p);
+
+                         }
+
+                     }
                  }
+                 counter++;
              }
 
-             /*
+              Entry en = new Entry();
+              foreach (Entry someEntry in myEntryList)
+              {
+                  if (someEntry.ClassId == "Olga1")
+                  {
+                     Serv = someEntry.Text;
+                     db.Player p = players.ToList()[0];
+                     p.ServStats = Serv;
+                     playerDatabase.UpdatePlayer(p);
+                      DisplayAlert("IS IT WORKING?", Serv, "YEAH 8-)");
+                  }
+                 if (someEntry.ClassId == "Olga1")
+                 {
 
-                         View view = controlGrid.Children.FirstOrDefault(v => Grid.GetRow(v) == 2 && Grid.GetColumn(v) == 2);
-                         if (view is Entry entry)
-                         {
-                             myTEXT = entry.Text;
-                         }
-                         else
-                             myTEXT = "FAIL";
+                 }
 
-                         DisplayAlert("TEST", myTEXT, "OK");
-                         */
+
+                  else
+                  {
+                      DisplayAlert("NOTHING WORKS", "NOPE", "SORRY");
+                  }
+              }
+   */
         }
 
         protected override void OnAppearing()

@@ -3,9 +3,11 @@ TODO:
 - TeamPage:
 	- Fix listlayout - DONE
 	- Try to fix refreshcommand - another solution - DONE
+	- Add button for delete player
 - NewGamePage:
 	- Missing - ADDED
-	- Fix DB stuff
+	- save to DB?
+	- Add button for statisticPage
 - GameStatisticsPage:
 	- Create Table - DONE
 	- Load players from DB - DONE
@@ -15,9 +17,15 @@ TODO:
 	- Save to DB
 	- Fix ugly background color
 	- fix button for sumit color
+- ArchivePage
+	- Load game list
+	- add buttons for view game and delete game
+- viewGamePage
+	- load and display all data
 
-- Fix project map structure
+- Fix project map structure - DONE
 - Add helperclass for text validators
+	- implement text validators
 
 
 - General:
