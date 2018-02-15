@@ -13,11 +13,7 @@ namespace VolleyballApp
 	public partial class GameStatisticsPage : ContentPage
 	{
         public db.Database playerDatabase;
-<<<<<<< HEAD
-
-=======
         public db.Player player;
->>>>>>> a1f272931ca913030c2d7062b054005b2f4008cb
         public Grid controlGrid;
         public List<Entry> myEntryList;
 
@@ -149,92 +145,71 @@ namespace VolleyballApp
 
         private void EndGame_Clicked(object sender, EventArgs e)
         {
+            getDataFromFields();
+            
+
+
+        }
+        private void getDataFromFields()
+        {
+            //connect to DB
             playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
-           List<db.Player> pList =  players.ToList();
-            /*           string Serv;
-                       string Reception;
-                       string Attack;
-                       string Block;
-                       string Dig;
-           */
-            /*
-             int counter = 0;
-             string classIdString = "";
-              for(int numb = 0; 0<players.ToList().Count(); numb++)
-             {
+            //Create list of players in DB
+            List<db.Player> pList =  players.ToList();
+            
+            string inputText = "";
+            //loop through every player in database
+            foreach (db.Player p in pList)
+            {
+                string pname = p.Name;
+                //go through every entry in the grid
+                foreach (Entry statsEntry in myEntryList)
+                {
+                    //field for serv
+                    if (statsEntry.ClassId == pname + 1)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = SERV, input text = " + inputText);
+                        p.ServStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
 
-                 classIdString = players.ToList()[numb].Name + counter;
-                 db.Player p = players.ToList()[numb];
-               //  Entry entry = new Entry();
-                 foreach(Entry myEntry in myEntryList)
-                 {
-                     if(myEntry.ClassId == classIdString)
-                     {
-                         string text = myEntry.Text;
-                         if (counter == 0)
-                         {
-                             p.ServStats = text;
-                             System.Diagnostics.Debug.WriteLine("save this to players serv stats: " + text);
-                             playerDatabase.UpdatePlayer(p);
-
-                         }
-                         else if (counter == 1)
-                         {
-                             p.ReceptionStats = text;
-                             playerDatabase.UpdatePlayer(p);
-                         }
-                         else if (counter == 2)
-                         {
-                             p.AttackStats = text;
-                             playerDatabase.UpdatePlayer(p);
-                         }
-                         else if (counter == 3)
-                         {
-                             p.AttackStats = text;
-                             playerDatabase.UpdatePlayer(p);
-                         }
-                         else if (counter == 4)
-                         {
-                             p.BlockStats = text;
-                             playerDatabase.UpdatePlayer(p);
-                         }
-                         else if (counter == 5)
-                         {
-                             p.DigStats = text;
-                             playerDatabase.UpdatePlayer(p);
-
-                         }
-
-                     }
-                 }
-                 counter++;
-             }
-
-              Entry en = new Entry();
-              foreach (Entry someEntry in myEntryList)
-              {
-                  if (someEntry.ClassId == "Olga1")
-                  {
-                     Serv = someEntry.Text;
-                     db.Player p = players.ToList()[0];
-                     p.ServStats = Serv;
-                     playerDatabase.UpdatePlayer(p);
-                      DisplayAlert("IS IT WORKING?", Serv, "YEAH 8-)");
-                  }
-                 if (someEntry.ClassId == "Olga1")
-                 {
-
-                 }
-
-
-                  else
-                  {
-                      DisplayAlert("NOTHING WORKS", "NOPE", "SORRY");
-                  }
-              }
-   */
-        }
+                    }
+                    //field for reception
+                    else if (statsEntry.ClassId == pname + 2)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = RECEPTION, input text = " + inputText);
+                        p.ReceptionStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for attack
+                    else if (statsEntry.ClassId == pname + 3)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = ATTACK, input text = " + inputText);
+                        p.AttackStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for block
+                    else if (statsEntry.ClassId == pname + 4)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", BLOCK, input text = " + inputText);
+                        p.BlockStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for dig
+                    else if (statsEntry.ClassId == pname + 5)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = DIG, input text = " + inputText);
+                        p.DigStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                }
+            }
+          }
 
         protected override void OnAppearing()
         {
