@@ -145,52 +145,71 @@ namespace VolleyballApp
 
         private void EndGame_Clicked(object sender, EventArgs e)
         {
+            getDataFromFields();
+            
+
+
+        }
+        private void getDataFromFields()
+        {
+            //connect to DB
             playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
-            players.ToList();
-            string p1Serv;
-            string p1Reception;
-            string p1Attack;
-            string p1Block;
-            string p1Dig;
-
-             
-             Entry en = new Entry();
-             foreach (Entry someEntry in myEntryList)
-             {
-                 if (someEntry.ClassId == "Olga1")
-                 {
-                    p1Serv = someEntry.Text;
-                    db.Player p = players.ToList()[0];
-                    p.ServStats = p1Serv;
-                    playerDatabase.UpdatePlayer(p);
-                     DisplayAlert("IS IT WORKING?", p1Serv, "YEAH 8-)");
-                 }
-                if (someEntry.ClassId == "Olga1")
+            //Create list of players in DB
+            List<db.Player> pList =  players.ToList();
+            
+            string inputText = "";
+            //loop through every player in database
+            foreach (db.Player p in pList)
+            {
+                string pname = p.Name;
+                //go through every entry in the grid
+                foreach (Entry statsEntry in myEntryList)
                 {
-                  
+                    //field for serv
+                    if (statsEntry.ClassId == pname + 1)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = SERV, input text = " + inputText);
+                        p.ServStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+
+                    }
+                    //field for reception
+                    else if (statsEntry.ClassId == pname + 2)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = RECEPTION, input text = " + inputText);
+                        p.ReceptionStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for attack
+                    else if (statsEntry.ClassId == pname + 3)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = ATTACK, input text = " + inputText);
+                        p.AttackStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for block
+                    else if (statsEntry.ClassId == pname + 4)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", BLOCK, input text = " + inputText);
+                        p.BlockStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
+                    //field for dig
+                    else if (statsEntry.ClassId == pname + 5)
+                    {
+                        inputText = statsEntry.Text;
+                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = DIG, input text = " + inputText);
+                        p.DigStats = inputText;
+                        playerDatabase.UpdatePlayer(p);
+                    }
                 }
-
-
-                 else
-                 {
-                     DisplayAlert("NOTHING WORKS", "NOPE", "SORRY");
-                 }
-             }
-
-             /*
-
-                         View view = controlGrid.Children.FirstOrDefault(v => Grid.GetRow(v) == 2 && Grid.GetColumn(v) == 2);
-                         if (view is Entry entry)
-                         {
-                             myTEXT = entry.Text;
-                         }
-                         else
-                             myTEXT = "FAIL";
-
-                         DisplayAlert("TEST", myTEXT, "OK");
-                         */
-        }
+            }
+          }
 
         protected override void OnAppearing()
         {
