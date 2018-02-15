@@ -42,6 +42,7 @@ namespace db
         public string GameScore { get; set; }
         public string HomeTeam { get; set; }
         public string AwayTeam { get; set; }
+        public string Description { get { return HomeTeam + " vs. " + AwayTeam; } }
 
         public Game() { }
 
