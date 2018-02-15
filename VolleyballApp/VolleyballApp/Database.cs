@@ -75,15 +75,6 @@ namespace db
     public class Database
     {
         private SQLiteConnection conn;
-        private static readonly Database instance = new Database();
-
-        public static Database Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
 
         // CREATE
         public Database()
