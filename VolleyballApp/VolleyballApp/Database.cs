@@ -130,6 +130,7 @@ namespace db
         {     
             return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
         }
+
         // INSERT
         public bool AddPlayer(Player player)
         {
@@ -157,6 +158,16 @@ namespace db
         }
 
         // DELETE
-        
+        public bool DeletePlayer(Player player)
+        {
+            conn.Delete(player);
+            return true;
+        }
+
+        public bool DeleteGame(Game game)
+        {
+            conn.Delete(game);
+            return true;
+        }
     }
 }

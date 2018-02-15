@@ -11,19 +11,19 @@
                         <TextCell Text="{Binding Description}" Detail="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}"/>
                     -->
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Padding="10,10,10,10" Orientation="Horizontal" >
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding Description}" Style="" />
+                                    <Label Text="{Binding Description}" FontAttributes="Bold" />
                                     <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" />
                                 </StackLayout>
                                 <Button 
                                     Clicked="ViewGame"
-                                    CommandParameter="{Binding Id}"
+                                    CommandParameter="{Binding .}"
                                     Text="View" 
                                     HorizontalOptions="EndAndExpand" />
                                 <Button 
                                     Clicked="DeleteGame"
-                                    CommandParameter="{Binding Id}"
+                                    CommandParameter="{Binding .}"
                                     Text="Delete" 
                                     HorizontalOptions="End" />
                             </StackLayout>
