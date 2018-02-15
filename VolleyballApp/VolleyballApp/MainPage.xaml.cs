@@ -13,7 +13,7 @@ namespace VolleyballApp
 		public MainPage()
 		{
 			InitializeComponent();
-            this.Title = "Volleyball statistics app";
+            //this.Title = "Volleyball statistics app";
             
         }
 
@@ -30,11 +30,7 @@ namespace VolleyballApp
 
         private void Team_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new TeamPage());
-        }
-        private void Statistics_Clicked(object sender, EventArgs e)
-        {
-         //   Navigation.PushAsync(new GameStatisticsPage());
+            Navigation.PushAsync(new MyPlayersPage());
         }
 
     }

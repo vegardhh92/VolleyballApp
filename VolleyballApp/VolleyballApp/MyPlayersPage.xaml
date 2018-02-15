@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolleyballApp.MyPlayersPage"
+             Title="My Players">
+    <ScrollView Margin="10,10,10,0">
+        <StackLayout Margin="10,10,10,0">
+            <Label Text="Add New Players" FontSize="20" FontFamily="Bold"/>
+            <Entry x:Name="numberEntry" Placeholder="Player number"/>
+            <Entry x:Name="nameEntry" Placeholder="Player name" />
+            <Picker x:Name="positionEntry" Title="Select player position">
+                 <Picker.Items>
+                    <x:String>Setter</x:String>
+                    <x:String>Libero</x:String>
+                    <x:String>Outside hitter</x:String>
+                    <x:String>Opposite hitter</x:String>
+                    <x:String>Middle blocker</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Save" Clicked="Save_Button_Clicked"/>
+            <Label Text="My Players: "  FontSize="20" FontFamily="Bold"/>
+            <ListView x:Name="teamMembersListView">
+                <ListView.ItemTemplate>
+                  <DataTemplate>
+                    <TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>
+                  </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+         </StackLayout>
+    </ScrollView>
+</ContentPage>

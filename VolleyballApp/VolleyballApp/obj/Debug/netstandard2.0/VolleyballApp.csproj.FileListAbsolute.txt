@@ -15,11 +15,9 @@ C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\Volle
 C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.dll
 C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.pdb
 <<<<<<< HEAD
-C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.deps.json
-C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.dll
-C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.pdb
-C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.EndGamePage.xaml.g.cs
 C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.EndGamePage.xaml.g.cs
 C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ViewGameStatsPage.xaml.g.cs
 =======
 >>>>>>> bbcd80add311cb38a465a1ae6b337c73a6bfbf5f
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ViewGameStatsPage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.MyPlayersPage.xaml.g.cs
