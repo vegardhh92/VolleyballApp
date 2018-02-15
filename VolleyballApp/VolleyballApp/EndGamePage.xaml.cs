@@ -20,7 +20,7 @@ namespace VolleyballApp
 		{
 			InitializeComponent ();
             myGameId = gameId;
-            database = db.Database.Instance;
+            database = new db.Database();
             //database = new db.Database();
             System.Diagnostics.Debug.WriteLine("HELLO END GAME PAGE " + myGameId.ToString());
             //game = new db.Game();
