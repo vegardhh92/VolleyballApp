@@ -14,18 +14,45 @@ namespace VolleyballApp
 	{
         public db.Database database;
         public db.Player player;
-       // public db.Game game;
+        // public db.Game game;
+        public int myGameId;
         public EndGamePage (int gameId)
 		{
 			InitializeComponent ();
-            int myGameId = gameId;
-            database = new db.Database();
+            myGameId = gameId;
+            database = db.Database.Instance;
+            //database = new db.Database();
             System.Diagnostics.Debug.WriteLine("HELLO END GAME PAGE " + myGameId.ToString());
             //game = new db.Game();
             db.Game game = database.GetGameFromId(myGameId);
             System.Diagnostics.Debug.WriteLine("GET GAME?");
             teams.Text = game.Description;
-            DateLabel.Text = game.Date.ToString();
 		}
+
+        public void Save_Clicked()
+        {
+
+            int thisGameId = myGameId;
+            System.Diagnostics.Debug.WriteLine("GET ID");
+            string gameScore = gameScoreEntry.Text;
+            System.Diagnostics.Debug.WriteLine("GET TEXT");
+            db.Game g = database.GetGameFromId(thisGameId);
+            System.Diagnostics.Debug.WriteLine("GET GAME WITH ID");
+            g.GameScore = gameScore;
+            System.Diagnostics.Debug.WriteLine("set game score");
+            database.UpdateGame(g);
+            System.Diagnostics.Debug.WriteLine("UPDATED GAME");
+            System.Diagnostics.Debug.WriteLine(database.GetGameFromId(thisGameId).GameScore);
+
+            Navigation.PopToRootAsync();
+            showArchive();
+            
+        }
+        async void showArchive()
+        {
+            
+            var page = new MainPage();
+            await Navigation.PushModalAsync(page);
+        }
 	}
 }

@@ -19,6 +19,7 @@ namespace VolleyballApp
 		public ArchivePage ()
 		{
 			InitializeComponent ();
+
             database = new db.Database();
 
             // Create observable collection and populate from DB
@@ -28,6 +29,7 @@ namespace VolleyballApp
 
             // Add observable collection as ItemSource for ListView
             gamesListView.ItemsSource = gamesObs;
+
         }
 
         public void ViewGame(object sender, EventArgs e)

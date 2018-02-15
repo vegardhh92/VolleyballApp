@@ -3,15 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VolleyballApp.EndGamePage"
              Title="End Game">
-    <StackLayout Margin="10,10,10,0">
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Teams: "/>
-            <Label x:Name="teams"/>
+    <StackLayout>
+    <Label Text="Teams"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+    <Label x:Name="teams" HorizontalOptions="CenterAndExpand"
+           FontSize="Large"/>
+    <StackLayout Orientation="Horizontal">
+        <Label Text="Game Score: " HorizontalOptions="Center"/>
+            <Entry x:Name="gameScoreEntry" 
+                       HorizontalOptions="Center"
+                       WidthRequest="150"
+                       Placeholder="Home - Away" />
         </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Date: "/>
-            <Label x:Name="DateLabel"/>
-        </StackLayout>
+        <Button Text="Save" Clicked="Save_Clicked"/>
     </StackLayout>
-
 </ContentPage>
