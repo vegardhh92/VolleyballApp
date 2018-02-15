@@ -29,7 +29,7 @@ namespace VolleyballApp
             myEntryList = new List<Entry>();
             //Setting backgroundcolor for mocking borders in our table
             BackgroundColor = Color.DodgerBlue;
-            DisplayAlert("GAME ID", GameId.ToString(), "OK");
+           // DisplayAlert("GAME ID", GameId.ToString(), "OK");
             var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
 
             var headerLabelStyle = new Style(typeof(Label))

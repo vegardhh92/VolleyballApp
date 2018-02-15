@@ -34,7 +34,7 @@ namespace VolleyballApp
 
             int gameId = game.Id;
 
-            DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
+           // DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
 
             ClearFields();
 
