@@ -22,6 +22,8 @@ namespace VolleyballApp
             // Get game from sent Id
             database = new db.Database();
             game = database.GetGameFromId(gameId);
+            List<db.Player> players = game.Players;
+            System.Diagnostics.Debug.WriteLine(players.Count);
 
             // Set elements
             title.Text = game.Description;

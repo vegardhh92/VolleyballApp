@@ -40,14 +40,23 @@ namespace VolleyballApp
             Navigation.PushAsync(new ViewGameStatsPage(game.Id));
         }
 
-        // TODO: add cancelable delete
-        public void DeleteGame(object sender, EventArgs e)
+        public async void DeleteGame(object sender, EventArgs e)
         {
-            // Get sent item from XAML
-            var item = (Xamarin.Forms.Button)sender;
-            db.Game game = (db.Game)item.CommandParameter;
+            var answer = await DisplayAlert("Delete game", "Do you really want to delete this game?", "Yes", "No");
+            if (answer)
+            {
+                // Get sent item from XAML
+                var item = (Xamarin.Forms.Button)sender;
+                db.Game game = (db.Game)item.CommandParameter;
+
+                // Remove from database and collection
+                DeleteGame(game);
+            }
             
-            // Remove from database and collection
+        }
+
+        private void DeleteGame(db.Game game)
+        {
             database.DeleteGame(game);
             gamesObs.Remove(game);
         }
