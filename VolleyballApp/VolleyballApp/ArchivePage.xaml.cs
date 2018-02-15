@@ -22,9 +22,19 @@ namespace VolleyballApp
             var games = database.GetGames().ToList();
 
             gamesListView.ItemsSource = games;
+        }
 
-            // TODO: Implent Custom ViewCell
-            // https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/custom-renderer/viewcell/
+        public void ViewGame(object sender, EventArgs e)
+        {
+            var item = (Xamarin.Forms.Button)sender;
+            DisplayAlert("Info", item.CommandParameter.ToString(), "OK");
+            // Open ViewGameStats
+        }
+
+        public void DeleteGame(object sender, EventArgs e)
+        {
+            // Delete the game
+            DisplayAlert("Info", "Delete Game", "OK");
         }
     }
 }

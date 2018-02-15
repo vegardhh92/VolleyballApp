@@ -4,10 +4,30 @@
              x:Class="VolleyballApp.ArchivePage">
     <ContentPage.Content>
         <StackLayout Margin="10,10,10,10">
-            <ListView x:Name="gamesListView">
+            <ListView x:Name="gamesListView" IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                            <TextCell Text="{Binding HomeTeam, StringFormat='Home Team: {0}'}" Detail="{Binding Date, StringFormat='dd-MM-yyyy'}"/>
+                    <!--
+                        <TextCell Text="{Binding Description}" Detail="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}"/>
+                    -->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Description}" Style="" />
+                                    <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" />
+                                </StackLayout>
+                                <Button 
+                                    Clicked="ViewGame"
+                                    CommandParameter="{Binding Id}"
+                                    Text="View" 
+                                    HorizontalOptions="EndAndExpand" />
+                                <Button 
+                                    Clicked="DeleteGame"
+                                    CommandParameter="{Binding Id}"
+                                    Text="Delete" 
+                                    HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

@@ -102,6 +102,9 @@ ipch/
 *.vspx
 *.sap
 
+obj/*
+bin/*
+
 # TFS 2012 Local Workspace
 $tf/
 

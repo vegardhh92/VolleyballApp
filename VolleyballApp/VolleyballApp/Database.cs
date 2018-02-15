@@ -118,9 +118,7 @@ namespace db
         }
 
         public Game GetGameFromId(int id)
-        {
-            //   return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
-            
+        {     
             return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
         }
         // INSERT
