@@ -13,7 +13,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" >
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding Description}" Font="Bold" />
+                                    <Label Text="{Binding Description}" FontAttributes="Bold" />
                                     <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" />
                                 </StackLayout>
                                 <Button 
