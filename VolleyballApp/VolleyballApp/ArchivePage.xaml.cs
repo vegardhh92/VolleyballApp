@@ -33,8 +33,9 @@ namespace VolleyballApp
         public void ViewGame(object sender, EventArgs e)
         {
             var item = (Xamarin.Forms.Button)sender;
-            DisplayAlert("Info", item.CommandParameter.ToString(), "OK");
-            // Open ViewGameStats
+            db.Game game = (db.Game)item.CommandParameter;
+
+            Navigation.PushAsync(new ViewGameStatsPage(game.Id));
         }
 
         // TODO: add cancelable delete
