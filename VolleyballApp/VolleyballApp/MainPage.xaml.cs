@@ -14,7 +14,8 @@ namespace VolleyballApp
 		{
 			InitializeComponent();
             this.Title = "Volleyball statistics app";
-		}
+            
+        }
 
         private void New_Game_Clicked(object sender, EventArgs e)
         {

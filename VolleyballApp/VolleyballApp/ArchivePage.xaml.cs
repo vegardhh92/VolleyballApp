@@ -16,12 +16,14 @@ namespace VolleyballApp
 
 		public ArchivePage ()
 		{
+            System.Diagnostics.Debug.WriteLine("Hello archive");
 			InitializeComponent ();
-
+            System.Diagnostics.Debug.WriteLine("INIT");
             database = new db.Database();
             var games = database.GetGames().ToList();
-
+            System.Diagnostics.Debug.WriteLine("Games to list");
             gamesListView.ItemsSource = games;
+            System.Diagnostics.Debug.WriteLine("all done");
         }
 
         public void ViewGame(object sender, EventArgs e)

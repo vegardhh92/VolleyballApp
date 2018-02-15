@@ -23,7 +23,7 @@ namespace VolleyballApp
              GameId = gameId;
 			InitializeComponent ();
             //Fetching players from database
-            playerDatabase = new db.Database();
+            playerDatabase = db.Database.Instance;
             var players = playerDatabase.GetPlayers();
             players.ToList();
             myEntryList = new List<Entry>();
@@ -155,7 +155,7 @@ namespace VolleyballApp
         private void getDataFromFields()
         {
             //connect to DB
-            playerDatabase = new db.Database();
+            playerDatabase = db.Database.Instance;
             var players = playerDatabase.GetPlayers();
             //Create list of players in DB
             List<db.Player> pList =  players.ToList();
