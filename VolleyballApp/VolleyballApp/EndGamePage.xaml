@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolleyballApp.EndGamePage"
+             Title="End Game">
+    <StackLayout Margin="10,10,10,0">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Teams: "/>
+            <Label x:Name="teams"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date: "/>
+            <Label x:Name="DateLabel"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

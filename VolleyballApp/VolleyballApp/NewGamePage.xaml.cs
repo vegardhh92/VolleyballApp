@@ -23,16 +23,23 @@ namespace VolleyballApp
 
         public void SubmitNewGame(Object o, EventArgs e)
         {
-            database.AddGame(new db.Game()
+            db.Game game = new db.Game()
             {
                 HomeTeam = homeTeamEntry.Text,
                 AwayTeam = awayTeamEntry.Text,
                 Date = gameDate.Date
-            });
+            };
+           
+            database.AddGame(game);
 
-            DisplayAlert("Info!", database.GetLastGame().ToString, "Ok");
+            int gameId = game.Id;
+
+            DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
 
             ClearFields();
+
+            Navigation.PushAsync(new GameStatisticsPage(gameId));
+
         }
 
         public void ClearFields()

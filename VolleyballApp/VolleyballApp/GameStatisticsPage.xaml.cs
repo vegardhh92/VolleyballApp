@@ -16,9 +16,11 @@ namespace VolleyballApp
         public db.Player player;
         public Grid controlGrid;
         public List<Entry> myEntryList;
-
-        public GameStatisticsPage ()
+        public int GameId;
+        public GameStatisticsPage (int gameId)
 		{
+
+             GameId = gameId;
 			InitializeComponent ();
             //Fetching players from database
             playerDatabase = new db.Database();
@@ -27,7 +29,7 @@ namespace VolleyballApp
             myEntryList = new List<Entry>();
             //Setting backgroundcolor for mocking borders in our table
             BackgroundColor = Color.DodgerBlue;
-
+            DisplayAlert("GAME ID", GameId.ToString(), "OK");
             var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
 
             var headerLabelStyle = new Style(typeof(Label))
@@ -145,10 +147,10 @@ namespace VolleyballApp
 
         private void EndGame_Clicked(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("FIRST IN ON_CLICK " + GameId.ToString());
             getDataFromFields();
-            
-
-
+            System.Diagnostics.Debug.WriteLine("AFTER GET DATA");
+            Navigation.PushAsync(new EndGamePage(GameId));
         }
         private void getDataFromFields()
         {

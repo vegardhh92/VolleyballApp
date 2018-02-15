@@ -42,6 +42,7 @@ namespace db
         public string GameScore { get; set; }
         public string HomeTeam { get; set; }
         public string AwayTeam { get; set; }
+        public string Description { get { return HomeTeam + " vs. " + AwayTeam; } }
 
         public Game() { }
 
@@ -116,6 +117,12 @@ namespace db
             return conn.Table<Game>().LastOrDefault();
         }
 
+        public Game GetGameFromId(int id)
+        {
+            //   return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
+            
+            return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
+        }
         // INSERT
         public bool AddPlayer(Player player)
         {
