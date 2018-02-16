@@ -20,7 +20,11 @@ namespace VolleyballApp
                 Navigation.PopToRootAsync();
                 System.Diagnostics.Debug.WriteLine("Nav stack > 1");
             }
-            
+
+            //Test for GameCalc
+            string testString = "++++0-00-+-000-+00++0--000+++";
+            Utils.GameCalc gc = new Utils.GameCalc();
+           System.Diagnostics.Debug.WriteLine("should be 50%: " +  gc.attackEfficiency(testString));
         }
 
         private void New_Game_Clicked(object sender, EventArgs e)
