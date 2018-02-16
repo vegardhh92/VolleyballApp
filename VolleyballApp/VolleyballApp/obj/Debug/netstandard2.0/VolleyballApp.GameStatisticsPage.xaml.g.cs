@@ -11,8 +11,8 @@
 namespace VolleyballApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\142552\\source\\repos\\VolleyballApp\\VolleyballApp\\VolleyballApp\\GameStatis" +
-        "ticsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\141459\\Documents\\VisualStudioProjects\\VolleyballApp\\VolleyballApp\\Volley" +
+        "ballApp\\GameStatisticsPage.xaml")]
     public partial class GameStatisticsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

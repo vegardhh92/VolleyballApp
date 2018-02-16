@@ -31,13 +31,13 @@ namespace VolleyballApp
             };
            
             database.AddGame(game);
-
+            
             int gameId = game.Id;
 
            // DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
 
             ClearFields();
-            if(game.Players != null) { 
+            if(database.GetPlayers().Count() > 0) { 
                 Navigation.PushAsync(new GameStatisticsPage(gameId));
             }
             else

@@ -22,9 +22,13 @@ namespace VolleyballApp
             }
 
             //Test for GameCalc
-            string testString = "++++0-00-+-000-+00++0--000+++";
-            Utils.GameCalc gc = new Utils.GameCalc();
-           System.Diagnostics.Debug.WriteLine("should be 50%: " +  gc.attackEfficiency(testString));
+            string testString = "";
+            Utils.Validators validator = new Utils.Validators();
+            System.Diagnostics.Debug.WriteLine("true? " + validator.servValidator(testString));
+            testString = "0+12345";
+            System.Diagnostics.Debug.WriteLine("False? " + validator.servValidator(testString));
+
+
         }
 
         private void New_Game_Clicked(object sender, EventArgs e)

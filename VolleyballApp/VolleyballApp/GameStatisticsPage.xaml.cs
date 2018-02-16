@@ -148,22 +148,27 @@ namespace VolleyballApp
         private void EndGame_Clicked(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("FIRST IN ON_CLICK " + GameId.ToString());
-            getDataFromFields();
+           if(getDataFromFields())
+            {
+                Navigation.PushAsync(new EndGamePage(GameId));
+            }
             System.Diagnostics.Debug.WriteLine("AFTER GET DATA");
-            Navigation.PushAsync(new EndGamePage(GameId));
+           
         }
-        private void getDataFromFields()
+        private bool getDataFromFields()
         {
             //connect to DB
             playerDatabase = new db.Database();
             var players = playerDatabase.GetPlayers();
             //Create list of players in DB
             List<db.Player> pList =  players.ToList();
-            
+            Utils.Validators validators = new Utils.Validators();
             string inputText = "";
             //loop through every player in database
+            Boolean allOk = true;
             foreach (db.Player p in pList)
             {
+               
                 string pname = p.Name;
                 //go through every entry in the grid
                 foreach (Entry statsEntry in myEntryList)
@@ -172,45 +177,93 @@ namespace VolleyballApp
                     if (statsEntry.ClassId == pname + 1)
                     {
                         inputText = statsEntry.Text;
-                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = SERV, input text = " + inputText);
-                        p.ServStats = inputText;
-                        playerDatabase.UpdatePlayer(p);
+                        if (validators.servValidator(inputText))
+                        {
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = SERV, input text = " + inputText);
+                            p.ServStats = inputText;
+                            playerDatabase.UpdatePlayer(p);
+                        }
+                        else
+                        {
+                            DisplayAlert("Invalid", "Invalid entry in Serv", "OK");
+                            allOk = false;
+                            break;
+                        }
 
                     }
                     //field for reception
                     else if (statsEntry.ClassId == pname + 2)
                     {
                         inputText = statsEntry.Text;
-                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = RECEPTION, input text = " + inputText);
-                        p.ReceptionStats = inputText;
-                        playerDatabase.UpdatePlayer(p);
+                        if (validators.receptionValidator(inputText))
+                        { 
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = RECEPTION, input text = " + inputText);
+                            p.ReceptionStats = inputText;
+                            playerDatabase.UpdatePlayer(p);
+                        }
+                        else
+                        {
+                            DisplayAlert("Invalid", "Invalid input in Reception", "OK");
+                            allOk = false;
+                            break;
+                        }
+
                     }
                     //field for attack
                     else if (statsEntry.ClassId == pname + 3)
                     {
                         inputText = statsEntry.Text;
-                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = ATTACK, input text = " + inputText);
-                        p.AttackStats = inputText;
-                        playerDatabase.UpdatePlayer(p);
+                        if (validators.attackValidator(inputText))
+                        {
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = ATTACK, input text = " + inputText);
+                            p.AttackStats = inputText;
+                            playerDatabase.UpdatePlayer(p);
+                        }
+                        else
+                        {
+                            DisplayAlert("Invalid", "Invalid input in Attacks", "OK");
+                            allOk = false;
+                            break;
+                        }
                     }
                     //field for block
                     else if (statsEntry.ClassId == pname + 4)
                     {
                         inputText = statsEntry.Text;
-                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", BLOCK, input text = " + inputText);
-                        p.BlockStats = inputText;
-                        playerDatabase.UpdatePlayer(p);
+                        if (validators.blockValidator(inputText))
+                        {
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", BLOCK, input text = " + inputText);
+                            p.BlockStats = inputText;
+                            playerDatabase.UpdatePlayer(p);
+                        }
+                        else{
+                            DisplayAlert("Invalid", "Invalid input in Block, onlyy + or k ", "OK");
+                            allOk = false;
+                            break;
+                        }
                     }
                     //field for dig
                     else if (statsEntry.ClassId == pname + 5)
                     {
                         inputText = statsEntry.Text;
-                        System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = DIG, input text = " + inputText);
-                        p.DigStats = inputText;
-                        playerDatabase.UpdatePlayer(p);
+                        if (validators.digValidator(inputText))
+                        {
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = DIG, input text = " + inputText);
+                            p.DigStats = inputText;
+                            playerDatabase.UpdatePlayer(p);
+                        }
+                        else
+                        {
+                            DisplayAlert("Invalid", "Invalid input in Digs", "OK");
+                            allOk = false;
+                            break;
+                            
+                        }
+                        
                     }
                 }
             }
+            return allOk;
           }
 
         protected override void OnAppearing()
