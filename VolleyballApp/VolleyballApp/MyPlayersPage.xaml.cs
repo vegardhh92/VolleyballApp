@@ -33,17 +33,26 @@ namespace VolleyballApp
         public void Save_Button_Clicked(object o, EventArgs e)
         {
             string numberFromInput = numberEntry.Text;
+            string name = nameEntry.Text;
+            string position = positionEntry.Items[positionEntry.SelectedIndex];
 
-            player = new db.Player();
+            Validators validator = new Validators();
+            if (validator.NewPlayerValidator(numberFromInput, name, position))
+            {
+                player = new db.Player();
 
-            playerDatabase = new db.Database();
-            player.Number = Convert.ToInt32(numberFromInput);
-            player.Name = nameEntry.Text;
-            player.Position = positionEntry.Items[positionEntry.SelectedIndex];
+                playerDatabase = new db.Database();
+                player.Number = Convert.ToInt32(numberFromInput);
+                player.Name = nameEntry.Text;
+                player.Position = positionEntry.Items[positionEntry.SelectedIndex];
 
-            playerDatabase.AddPlayer(player);
-            playersObs.Add(player);
-            
+                playerDatabase.AddPlayer(player);
+                playersObs.Add(player);
+            }
+            else
+            {
+                DisplayAlert("Invalid inputs", "some fields are invalid, try again", "OK");
+            }
         }
 
         protected override void OnAppearing()

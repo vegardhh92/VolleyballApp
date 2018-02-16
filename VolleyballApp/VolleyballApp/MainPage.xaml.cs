@@ -14,6 +14,12 @@ namespace VolleyballApp
 		{
 			InitializeComponent();
             //this.Title = "Volleyball statistics app";
+
+            if(Navigation.NavigationStack.Count > 1)
+            {
+                Navigation.PopToRootAsync();
+                System.Diagnostics.Debug.WriteLine("Nav stack > 1");
+            }
             
         }
 
