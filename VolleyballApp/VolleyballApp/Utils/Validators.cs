@@ -13,12 +13,17 @@ namespace VolleyballApp.Utils
             bool numbCheck = false;
             bool nameCheck = false;
             bool posCheck = false;
+<<<<<<< HEAD
             string regString = "^[1 - 9] +[0 - 9] *$";
+=======
+            string regString = "^[0-9][0-9]$";
+            string validNameRegex = "^[^0-9]+$";
+>>>>>>> d339a2a418eed2a13a0d689ba2181281a4232fb2
             if (numb != null && Regex.IsMatch(numb, regString))
             {
                 numbCheck = true;
             }
-            if (name != null && Regex.IsMatch(name, "[A - Za - z]"))
+            if (name != null && Regex.IsMatch(name, validNameRegex))
             {
                 nameCheck = true;
             }
