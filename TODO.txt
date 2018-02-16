@@ -1,11 +1,11 @@
 TODO:
 MUST GET DONE:
-	- Player database
+	- Player database - DONE
 	- ViewGamePage
 - TeamPage:
 	- Fix listlayout - DONE
 	- Try to fix refreshcommand - another solution - DONE
-	- Add button for delete player
+	- Add button for delete player - DONE
 - NewGamePage:
 	- Missing - ADDED
 	- save to DB - DONE
