@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace VolleyballApp
 	{
         private db.Database database;
         private db.Game game;
+        private ObservableCollection<db.Player> playersObs;
 
 		public ViewGameStatsPage (int gameId)
 		{
@@ -22,8 +24,14 @@ namespace VolleyballApp
             // Get game from sent Id
             database = new db.Database();
             game = database.GetGameFromId(gameId);
-            List<db.Player> players = game.Players;
-            System.Diagnostics.Debug.WriteLine(players.Count);
+
+            // Add players if they exist
+            if (game.Players.Count > 0)
+            {
+                playersObs = new ObservableCollection<db.Player>();
+                game.Players.ForEach(playersObs.Add);
+                playersListView.ItemsSource = playersObs;
+            }
 
             // Set elements
             title.Text = game.Description;
