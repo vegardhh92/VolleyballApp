@@ -48,15 +48,8 @@ namespace VolleyballApp
             
             int gameId = game.Id;
 
-           // DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
-
             ClearFields();
-<<<<<<< HEAD
-            //if(database.GetPlayers().Count() > 0) { 
             if (game.Players.Count > 0) { 
-=======
-            if(database.GetPlayers().Count() > 0) { 
->>>>>>> e9539927e64f7c4fd7709234b3b693e299b2e10c
                 Navigation.PushAsync(new GameStatisticsPage(gameId));
             }
             else

@@ -2,10 +2,11 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace VolleyballApp
 {
-    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyPlayersPage : ContentPage
     {
         public db.Database playerDatabase;
