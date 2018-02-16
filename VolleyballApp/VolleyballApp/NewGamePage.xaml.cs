@@ -34,11 +34,17 @@ namespace VolleyballApp
 
             int gameId = game.Id;
 
-            DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
+           // DisplayAlert("Info!", database.GetGameFromId(gameId).Description,  "Ok");
 
             ClearFields();
-
-            Navigation.PushAsync(new GameStatisticsPage(gameId));
+            if(game.Players != null) { 
+                Navigation.PushAsync(new GameStatisticsPage(gameId));
+            }
+            else
+            {
+                DisplayAlert("NO PLAYERS", "Cannot continue, you have no players", "OK");
+                Navigation.PushAsync(new MyPlayersPage());
+            }
 
         }
 
