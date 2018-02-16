@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.deps.json
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.dll
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.pdb
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.csprojResolveAssemblyReference.cache
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.csproj.CoreCompileInputs.cache
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.App.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ArchivePage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.EndGamePage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.GameStatisticsPage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.MainPage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.MyPlayersPage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.NewGamePage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ViewGameStatsPage.xaml.g.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.AssemblyInfoInputs.cache
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.AssemblyInfo.cs
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.dll
+C:\Users\142552\source\repos\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.pdb
+=======
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.deps.json
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.dll
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\bin\Debug\netstandard2.0\VolleyballApp.pdb
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.csproj.CoreCompileInputs.cache
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.App.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ArchivePage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.EndGamePage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.GameStatisticsPage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.MainPage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.MyPlayersPage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.NewGamePage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.ViewGameStatsPage.xaml.g.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.AssemblyInfoInputs.cache
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.AssemblyInfo.cs
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.dll
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.pdb
+C:\Users\141459\Documents\VisualStudioProjects\VolleyballApp\VolleyballApp\VolleyballApp\obj\Debug\netstandard2.0\VolleyballApp.csprojResolveAssemblyReference.cache
+>>>>>>> e9539927e64f7c4fd7709234b3b693e299b2e10c
