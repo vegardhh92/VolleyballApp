@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using SQLiteNetExtensions.Attributes;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,62 +90,47 @@ namespace db
         // READ
         public IEnumerable<Player> GetPlayers()
         {
-            return (from player in conn.Table<Player>() select player).ToList();
+            return conn.GetAllWithChildren<Player>();
         }
 
         public IEnumerable<Game> GetGames()
         {
-            return (from game in conn.Table<Game>() select game).ToList();
+            return conn.GetAllWithChildren<Game>();
         }
 
-        public Player GetFirstPlayer()
+        public Player GetPlayerFromId(int id)
         {
-            return conn.Table<Player>().FirstOrDefault();
-        }
-
-        public Game GetFirstGame()
-        {
-            return conn.Table<Game>().FirstOrDefault();
-        }
-
-        public Player GetLastPlayer()
-        {
-            return conn.Table<Player>().LastOrDefault();
-        }
-
-        public Game GetLastGame()
-        {
-            return conn.Table<Game>().LastOrDefault();
+            return conn.GetWithChildren<Player>(id);
         }
 
         public Game GetGameFromId(int id)
-        {     
-            return conn.Table<Game>().Where(game => game.Id == id).FirstOrDefault();
+        {
+            return conn.GetWithChildren<Game>(id);
         }
 
         // INSERT
         public bool AddPlayer(Player player)
         {
-            conn.Insert(player);
+            conn.InsertWithChildren(player);
             return true;
         }
 
         public bool AddGame(Game game)
         {
-            conn.Insert(game);
+            conn.InsertWithChildren(game);
             return true;
         }
 
         // UPDATE
         public bool UpdatePlayer(Player player)
         {
-            conn.Update(player);
+            conn.UpdateWithChildren(player);
             return true;
         }
 
         public bool UpdateGame(Game game)
         {
-            conn.Update(game);
+            conn.UpdateWithChildren(game);
             return true;
         }
 

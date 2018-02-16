@@ -12,6 +12,17 @@
                 FontSize="Medium"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />
+            <ListView x:Name="playersListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
