@@ -36,7 +36,7 @@ namespace VolleyballApp
             string name = nameEntry.Text;
             string position = positionEntry.Items[positionEntry.SelectedIndex];
 
-            Validators validator = new Validators();
+            Utils.Validators validator = new Utils.Validators();
             if (validator.NewPlayerValidator(numberFromInput, name, position))
             {
                 player = new db.Player();
