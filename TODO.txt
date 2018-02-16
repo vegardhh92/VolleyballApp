@@ -1,27 +1,29 @@
 TODO:
-
+MUST GET DONE:
+	- Player database
+	- ViewGamePage
 - TeamPage:
 	- Fix listlayout - DONE
 	- Try to fix refreshcommand - another solution - DONE
 	- Add button for delete player
 - NewGamePage:
 	- Missing - ADDED
-	- save to DB?
-	- Add button for statisticPage
+	- save to DB - DONE
+	- Add button for statisticPage - DONE
 - GameStatisticsPage:
 	- Create Table - DONE
 	- Load players from DB - DONE
-	- Add buttons for input
-	- Fetch input from fields 
-	- add end game button - add set scores
-	- Save to DB
+	- Add buttons for input 
+	- Fetch input from fields - DONE
+	- add end game button - add set scores - DONE
+	- Save to DB	 - DONE
 	- Fix ugly background color
-	- fix button for sumit color
+	- fix button for submit color
 - ArchivePage
-	- Load game list
-	- add buttons for view game and delete game
+	- Load game list	 - DONE
+	- add buttons for view game and delete game - DONE
 - viewGamePage
-	- load and display all data
+	- load and display all data 
 
 - Fix project map structure - DONE
 - Add helperclass for text validators
