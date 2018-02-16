@@ -21,9 +21,22 @@
             <Label Text="My Players: "  FontSize="20" FontFamily="Bold"/>
             <ListView x:Name="teamMembersListView">
                 <ListView.ItemTemplate>
-                  <DataTemplate>
-                    <TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>
-                  </DataTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Position}" />
+                                </StackLayout>
+                                <Button 
+                                    Clicked="DeletePlayer"
+                                    CommandParameter="{Binding .}"
+                                    Text="Delete" 
+                                    HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
          </StackLayout>

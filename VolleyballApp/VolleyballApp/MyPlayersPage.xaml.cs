@@ -56,6 +56,26 @@ namespace VolleyballApp
             }
         }
 
+        public async void DeletePlayer(object sender, EventArgs e)
+        {
+            // Get player from XAML
+            var item = (Button)sender;
+            db.Player player = (db.Player)item.CommandParameter;
+
+            var answer = await DisplayAlert("Delete player", "Do you really want to delete player " + player.Name + "?", "Yes", "No");
+            if (answer)
+            {
+                // Remove player from DB and collection
+                DeletePlayer(player);
+            }
+        }
+
+        private void DeletePlayer(db.Player player)
+        {
+            playerDatabase.DeletePlayer(player);
+            playersObs.Remove(player);
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
