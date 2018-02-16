@@ -13,8 +13,12 @@ namespace VolleyballApp.Utils
             bool numbCheck = false;
             bool nameCheck = false;
             bool posCheck = false;
+<<<<<<< HEAD
+            string regString = "^[1 - 9] +[0 - 9] *$";
+=======
             string regString = "^[0-9][0-9]$";
             string validNameRegex = "^[^0-9]+$";
+>>>>>>> d339a2a418eed2a13a0d689ba2181281a4232fb2
             if (numb != null && Regex.IsMatch(numb, regString))
             {
                 numbCheck = true;
@@ -35,10 +39,13 @@ namespace VolleyballApp.Utils
             string servRegEx = "[0+-]";
             if (servs == "" || Regex.IsMatch(servs, servRegEx))
             {
+                System.Diagnostics.Debug.WriteLine("Serv OK");
                 return true;
+                
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("Serv fail");
                 return false;
             }
         }
@@ -48,10 +55,12 @@ namespace VolleyballApp.Utils
             string attackRegEx = "[+-0]";
             if (attacks == "" || Regex.IsMatch(attacks, attackRegEx))
             {
+                System.Diagnostics.Debug.WriteLine("attack ok");
                 return true;
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("Attack fail");
                 return false;
             }
         }
@@ -60,22 +69,26 @@ namespace VolleyballApp.Utils
             string servRegEx = "[12345]";
             if (rec == "" || Regex.IsMatch(rec, servRegEx))
             {
+                System.Diagnostics.Debug.WriteLine("reception ok");
                 return true;
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("reception fail");
                 return false;
             }
         }
         public Boolean blockValidator(string block)
         {
-            string servRegEx = "[+k]";
-            if (block == "" || Regex.IsMatch(block, servRegEx))
+            string blockRegEx = "[+k]";
+            if (block == "" || Regex.IsMatch(block, blockRegEx))
             {
+                System.Diagnostics.Debug.WriteLine("block ok");
                 return true;
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("block fail");
                 return false;
             }
         }
@@ -85,10 +98,12 @@ namespace VolleyballApp.Utils
             string servRegEx = "[!]";
             if (dig == "" || Regex.IsMatch(dig, servRegEx))
             {
+                System.Diagnostics.Debug.WriteLine("dig ok");
                 return true;
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("Dig fail");
                 return false;
             }
         }

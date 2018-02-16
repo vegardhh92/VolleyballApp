@@ -24,7 +24,8 @@ namespace VolleyballApp
 			InitializeComponent ();
             //Fetching players from database
             playerDatabase = new db.Database();
-            var players = playerDatabase.GetPlayers();
+          var players = playerDatabase.GetGameFromId(gameId).Players;
+           // var players = playerDatabase.GetPlayers();
             players.ToList();
             myEntryList = new List<Entry>();
             //Setting backgroundcolor for mocking borders in our table
@@ -63,7 +64,7 @@ namespace VolleyballApp
                 };
 
             //Setting up grid row and column definitions
-           
+
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             controlGrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
@@ -101,7 +102,7 @@ namespace VolleyballApp
                     {
                     string idString = pName + colNr.ToString();
                     myEntryList.Add(
-                        new Entry{Style = entryStyle, ClassId = idString}
+                        new Entry { Style = entryStyle, ClassId = idString, WidthRequest = 100 }
                     );
                      
                       //  controlGrid.Children.Add(new Entry  { Style = entryStyle, ClassId= idString}, colNr, rowNr);
@@ -150,6 +151,7 @@ namespace VolleyballApp
             System.Diagnostics.Debug.WriteLine("FIRST IN ON_CLICK " + GameId.ToString());
            if(getDataFromFields())
             {
+                System.Diagnostics.Debug.WriteLine("getdata = true");
                 Navigation.PushAsync(new EndGamePage(GameId));
             }
             System.Diagnostics.Debug.WriteLine("AFTER GET DATA");
@@ -263,6 +265,7 @@ namespace VolleyballApp
                     }
                 }
             }
+            System.Diagnostics.Debug.WriteLine("Value of bool in check all: " + allOk);
             return allOk;
           }
 

@@ -49,6 +49,10 @@ namespace VolleyballApp
             int gameId = game.Id;
 
             ClearFields();
+<<<<<<< HEAD
+
+=======
+>>>>>>> d339a2a418eed2a13a0d689ba2181281a4232fb2
             if (game.Players.Count > 0) { 
                 Navigation.PushAsync(new GameStatisticsPage(gameId));
             }
