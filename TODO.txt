@@ -1,7 +1,7 @@
 TODO:
 MUST GET DONE:
 	- Player database - DONE
-	- ViewGamePage
+	- ViewGamePage - DONE
 - TeamPage:
 	- Fix listlayout - DONE
 	- Try to fix refreshcommand - another solution - DONE
@@ -23,7 +23,7 @@ MUST GET DONE:
 	- Load game list	 - DONE
 	- add buttons for view game and delete game - DONE
 - viewGamePage
-	- load and display all data 
+	- load and display all data - DONE
 
 - Fix project map structure - DONE
 - Add helperclass for text validators
@@ -35,3 +35,13 @@ MUST GET DONE:
 	- Added forced landscape mode for app.
 		 VolleyballApp.Android -> MainActivity -> line 12 -> 
 			ScreenOrientation =ScreenOrientation.Landscape
+
+
+# Issues and Todo
+* My players does not support space in name. Should it?
+* Statistics still crashes on empty input
+* Implement setScore
+* Remove debug-output
+* New Game needs scroll for very small/short windows (Less important)
+* ViewGameStatsPage header padding in small windows (Less important)
+
