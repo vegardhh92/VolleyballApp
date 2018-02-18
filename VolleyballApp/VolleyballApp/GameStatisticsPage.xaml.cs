@@ -239,7 +239,7 @@ namespace VolleyballApp
                             playerDatabase.UpdatePlayer(p);
                         }
                         else{
-                            DisplayAlert("Invalid", "Invalid input in Block, onlyy + or k ", "OK");
+                            DisplayAlert("Invalid", "Invalid input in Block, only + or k ", "OK");
                             allOk = false;
                             break;
                         }
