@@ -49,6 +49,8 @@ namespace VolleyballApp
 
                 playerDatabase.AddPlayer(player);
                 playersObs.Add(player);
+
+                ClearInputFields();
             }
             else
             {
@@ -74,6 +76,13 @@ namespace VolleyballApp
         {
             playerDatabase.DeletePlayer(player);
             playersObs.Remove(player);
+        }
+
+        private void ClearInputFields()
+        {
+            numberEntry.Text = "";
+            nameEntry.Text = "";
+            positionEntry.SelectedIndex = -1;
         }
 
         protected override void OnAppearing()
