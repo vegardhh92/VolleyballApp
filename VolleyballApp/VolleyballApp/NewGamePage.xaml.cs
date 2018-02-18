@@ -53,6 +53,10 @@ namespace VolleyballApp
             if (game.Players.Count > 0) { 
                 Navigation.PushAsync(new GameStatisticsPage(gameId));
             }
+            else if (availablePlayers.Count > 0)
+            {
+                DisplayAlert("NO PLAYERS", "Cannot continue, you have no players", "OK");
+            }
             else
             {
                 DisplayAlert("NO PLAYERS", "Cannot continue, you have no players", "OK");
