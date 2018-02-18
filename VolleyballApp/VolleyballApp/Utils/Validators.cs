@@ -10,16 +10,16 @@ namespace VolleyballApp.Utils
 
         public bool NewPlayerValidator(string numb, string name, string position)
         {
+            return (pNameValidator(name) && pNumberValidator(numb) && pPosValidator(position));
+            /*
             bool numbCheck = false;
             bool nameCheck = false;
             bool posCheck = false;
-<<<<<<< HEAD
-            string regString = "^[1 - 9] +[0 - 9] *$";
-=======
-            string regString = "^[0-9][0-9]$";
+
             string validNameRegex = "^[^0-9]+$";
->>>>>>> d339a2a418eed2a13a0d689ba2181281a4232fb2
-            if (numb != null && Regex.IsMatch(numb, regString))
+            string numberRegEx = "^([1-9]|[1-9][0-9])$";
+
+            if (numb != null && Regex.IsMatch(numb, numberRegEx))
             {
                 numbCheck = true;
             }
@@ -32,6 +32,26 @@ namespace VolleyballApp.Utils
                 posCheck = true;
             }
             return (numbCheck && nameCheck && posCheck);
+            */
+        }
+
+        public Boolean pNumberValidator(string number)
+        {
+            string numberRegEx = "^([1-9]|[1-9][0-9])$";
+            return (number != null && Regex.IsMatch(number, numberRegEx));
+        }
+
+        public Boolean pNameValidator(string name)
+        {
+            string nameRegEx = "^[A-Za-z'.-]+$";
+
+            return (name != null && Regex.IsMatch(name, nameRegEx));
+
+        }
+
+        public Boolean pPosValidator(string pos)
+        {
+            return pos != null;
         }
 
         public Boolean servValidator(string servs)

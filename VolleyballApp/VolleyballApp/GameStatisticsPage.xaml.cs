@@ -15,7 +15,7 @@ namespace VolleyballApp
         public db.Database playerDatabase;
         public db.Player player;
         public Grid controlGrid;
-        public List<Entry> myEntryList;
+        public List<Editor> myEntryList;
         public int GameId;
         public GameStatisticsPage (int gameId)
 		{
@@ -27,7 +27,7 @@ namespace VolleyballApp
           var players = playerDatabase.GetGameFromId(gameId).Players;
            // var players = playerDatabase.GetPlayers();
             players.ToList();
-            myEntryList = new List<Entry>();
+            myEntryList = new List<Editor>();
             //Setting backgroundcolor for mocking borders in our table
             BackgroundColor = Color.DodgerBlue;
            // DisplayAlert("GAME ID", GameId.ToString(), "OK");
@@ -53,13 +53,13 @@ namespace VolleyballApp
                 }
             };
             //Style for entry
-                var entryStyle = new Style(typeof(Entry))
+                var entryStyle = new Style(typeof(Editor))
                 {
                     Setters =
                 {
-                    new Setter{Property = Entry.BackgroundColorProperty, Value = Color.White},
-                    new Setter {Property = Entry.TextColorProperty, Value = Color.Black},
-                    new Setter{Property = Entry.FontSizeProperty, Value = 20}
+                    new Setter{Property = Editor.BackgroundColorProperty, Value = Color.White},
+                    new Setter {Property = Editor.TextColorProperty, Value = Color.Black},
+                    new Setter{Property = Editor.FontSizeProperty, Value = 20}
                 }
                 };
 
@@ -102,7 +102,7 @@ namespace VolleyballApp
                     {
                     string idString = pName + colNr.ToString();
                     myEntryList.Add(
-                        new Entry { Style = entryStyle, ClassId = idString, WidthRequest = 100 }
+                        new Editor { Style = entryStyle, ClassId = idString, WidthRequest = 100 }
                     );
                      
                       //  controlGrid.Children.Add(new Entry  { Style = entryStyle, ClassId= idString}, colNr, rowNr);
@@ -115,7 +115,7 @@ namespace VolleyballApp
             rowNr = 1;
             colNr = 1;
             int testnumber = 0;
-            foreach (Entry e in myEntryList)
+            foreach (Editor e in myEntryList)
             {
               
                // e.Text = "Col, Row: " + colNr + "," + rowNr;
@@ -173,7 +173,7 @@ namespace VolleyballApp
                
                 string pname = p.Name;
                 //go through every entry in the grid
-                foreach (Entry statsEntry in myEntryList)
+                foreach (Editor statsEntry in myEntryList)
                 {
                     //field for serv
                     if (statsEntry.ClassId == pname + 1)
