@@ -43,15 +43,11 @@ namespace VolleyballApp
                 Date = gameDate.Date,
                 Players = new List<db.Player>(currentPlayersOnTeam)
             };
-           
-            database.AddGame(game);
             
-            int gameId = game.Id;
-
             ClearFields();
-
             if (game.Players.Count > 0) { 
-                Navigation.PushAsync(new GameStatisticsPage(gameId));
+                database.AddGame(game);
+                Navigation.PushAsync(new GameStatisticsPage(game.Id));
             }
             else if (availablePlayers.Count > 0)
             {
@@ -62,7 +58,6 @@ namespace VolleyballApp
                 DisplayAlert("NO PLAYERS", "Cannot continue, you have no players", "OK");
                 Navigation.PushAsync(new MyPlayersPage());
             }
-
         }
 
         public void AddPlayerToCurrent(object sender, EventArgs e)
