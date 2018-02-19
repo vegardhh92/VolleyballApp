@@ -4,33 +4,31 @@
              x:Class="VolleyballApp.ArchivePage"
              Title="Game Archive">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Margin="10,10,10,10">
-                <ListView x:Name="gamesListView" HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Padding="0,10" Orientation="Horizontal">
-                                    <StackLayout Orientation="Vertical">
-                                        <Label Text="{Binding Description}" FontAttributes="Bold" />
-                                        <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" />
-                                    </StackLayout>
-                                    <Button
-                                    Clicked="ViewGame"
-                                    CommandParameter="{Binding .}"
-                                    Text="View" 
-                                    HorizontalOptions="EndAndExpand" />
-                                    <Button
-                                    Clicked="DeleteGame"
-                                    CommandParameter="{Binding .}"
-                                    Text="Delete" 
-                                    HorizontalOptions="End" />
+        <StackLayout Margin="10">
+            <ListView x:Name="gamesListView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,10" Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Description}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Date, StringFormat='{0:dd MMMM yyyy}'}" />
                                 </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </ScrollView>
+                                <Button
+                                Clicked="ViewGame"
+                                CommandParameter="{Binding .}"
+                                Text="View" 
+                                HorizontalOptions="EndAndExpand" />
+                                <Button
+                                Clicked="DeleteGame"
+                                CommandParameter="{Binding .}"
+                                Text="Delete" 
+                                HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

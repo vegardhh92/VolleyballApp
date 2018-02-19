@@ -3,79 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VolleyballApp.NewGamePage"
              Title="New Game">
-    <ScrollView>
-
-    <StackLayout Margin="10,10,10,10">
-        <Label Text="Date"
-               HorizontalOptions="CenterAndExpand"
-               FontSize="Large"/>
-        <DatePicker x:Name="gameDate" 
-                    HorizontalOptions="CenterAndExpand"/>
-        <Label></Label>
-        <Label Text="Teams"
-               HorizontalOptions="Center"
-               FontSize="Large"/>
-        <StackLayout Orientation="Horizontal">
-            <Entry x:Name="homeTeamEntry" 
-                   HorizontalOptions="FillAndExpand"
-                   Placeholder="Home" />
-            <Label Text="vs" 
-                   FontSize="Medium" />
-            <Entry x:Name="awayTeamEntry" 
-                   HorizontalOptions="FillAndExpand"
-                   Placeholder="Away" />
-        </StackLayout>
-        <Label></Label>
-        <StackLayout Orientation="Horizontal">
-            <StackLayout Orientation="Vertical">
-                <Label Text="Available players" FontAttributes="Bold" />
-                <ListView x:Name="availablePlayersListView">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Name}" />
-                                    <Label Text="{Binding Position, StringFormat='- {0}'}" />
-                                    <Button 
-                                        Clicked="AddPlayerToCurrent"
-                                        CommandParameter="{Binding .}"
-                                        Text="+" 
-                                        HorizontalOptions="EndAndExpand" 
-                                        FontAttributes="Bold" />
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+    <ScrollView Margin="10">
+        <StackLayout>
+            <Label Text="Date"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+            <DatePicker x:Name="gameDate" 
+                        HorizontalOptions="CenterAndExpand"/>
+            <Label></Label>
+            <Label Text="Teams"
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="homeTeamEntry" 
+                       HorizontalOptions="FillAndExpand"
+                       Placeholder="Home" />
+                <Label Text="vs" 
+                       FontSize="Medium" />
+                <Entry x:Name="awayTeamEntry" 
+                       HorizontalOptions="FillAndExpand"
+                       Placeholder="Away" />
             </StackLayout>
-            <StackLayout Orientation="Vertical">
-                <Label Text="Current players on team" FontAttributes="Bold" />
-                <ListView x:Name="currentPlayersOnTeamListView">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Name}" />
-                                    <Label Text="{Binding Position, StringFormat='- {0}'}" />
-                                    <Button 
-                                        Clicked="RemovePlayerFromCurrent"
-                                        CommandParameter="{Binding .}"
-                                        Text="-" 
-                                        HorizontalOptions="EndAndExpand" 
-                                        FontAttributes="Bold" />
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+            <Label></Label>
+            <StackLayout Orientation="Horizontal" HeightRequest="150">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Available players" FontAttributes="Bold" />
+                    <ListView x:Name="availablePlayersListView">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="{Binding Position, StringFormat='- {0}'}" />
+                                        <Button 
+                                            Clicked="AddPlayerToCurrent"
+                                            CommandParameter="{Binding .}"
+                                            Text="+" 
+                                            HorizontalOptions="EndAndExpand" 
+                                            FontAttributes="Bold" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Current players on team" FontAttributes="Bold" />
+                    <ListView x:Name="currentPlayersOnTeamListView">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="{Binding Position, StringFormat='- {0}'}" />
+                                        <Button 
+                                            Clicked="RemovePlayerFromCurrent"
+                                            CommandParameter="{Binding .}"
+                                            Text="-" 
+                                            HorizontalOptions="EndAndExpand" 
+                                            FontAttributes="Bold" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
             </StackLayout>
+            <Label></Label>
+            <Button 
+                Text="Ok" 
+                Clicked="SubmitNewGame" />
         </StackLayout>
-        <Label></Label>
-        <Button 
-            Text="Ok" 
-            VerticalOptions="Start"
-            Clicked="SubmitNewGame" />
-    </StackLayout>
     </ScrollView>
-
 </ContentPage>
