@@ -27,8 +27,7 @@ namespace VolleyballApp
           //  System.Diagnostics.Debug.WriteLine("true? " + validator.servValidator(testString));
             testString = "0+12345";
             //  System.Diagnostics.Debug.WriteLine("False? " + validator.servValidator(testString));
-
-           
+            
 
         }
 

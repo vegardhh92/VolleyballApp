@@ -63,9 +63,9 @@ namespace VolleyballApp
                 data.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
                 // Get calculated game-stats
-                string servEfficiency = Utils.GameCalc.ServEfficiency(player.ServStats).ToString();
+                string servEfficiency = (Utils.GameCalc.ServEfficiency(player.ServStats)*100.0).ToString() + "%";
                 string avgReception = Utils.GameCalc.AvgReception(player.ReceptionStats).ToString();
-                string attackEfficiency = Utils.GameCalc.AttackEfficiency(player.AttackStats).ToString();
+                string attackEfficiency = (Utils.GameCalc.AttackEfficiency(player.AttackStats)*100.0).ToString() + "%";
 
                 // Populate
                 data.Children.Add(new Label { Text = player.Name },         0, rowNumber);
@@ -95,9 +95,9 @@ namespace VolleyballApp
 
             // Header text
             headers.Children.Add(new Label { Text = "Name",     FontAttributes = FontAttributes.Bold }, 0, 0);
-            headers.Children.Add(new Label { Text = "Serv",     FontAttributes = FontAttributes.Bold }, 1, 0);
-            headers.Children.Add(new Label { Text = "Reception",FontAttributes = FontAttributes.Bold }, 2, 0);
-            headers.Children.Add(new Label { Text = "Attack",   FontAttributes = FontAttributes.Bold }, 3, 0);
+            headers.Children.Add(new Label { Text = "Serv Efficiency",     FontAttributes = FontAttributes.Bold }, 1, 0);
+            headers.Children.Add(new Label { Text = "Reception Average",FontAttributes = FontAttributes.Bold }, 2, 0);
+            headers.Children.Add(new Label { Text = "Attack Efficiency",   FontAttributes = FontAttributes.Bold }, 3, 0);
             headers.Children.Add(new Label { Text = "Block",    FontAttributes = FontAttributes.Bold }, 4, 0);
             headers.Children.Add(new Label { Text = "Dig",      FontAttributes = FontAttributes.Bold }, 5, 0);
         }

@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VolleyballApp.NewGamePage"
              Title="New Game">
+    <ScrollView>
+
     <StackLayout Margin="10,10,10,10">
         <Label Text="Date"
                HorizontalOptions="CenterAndExpand"
@@ -74,4 +76,6 @@
             VerticalOptions="Start"
             Clicked="SubmitNewGame" />
     </StackLayout>
+    </ScrollView>
+
 </ContentPage>

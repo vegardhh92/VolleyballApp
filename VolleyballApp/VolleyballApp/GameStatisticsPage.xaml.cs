@@ -15,7 +15,7 @@ namespace VolleyballApp
         public db.Database playerDatabase;
         public db.Player player;
         public Grid controlGrid;
-        public List<Editor> myEntryList;
+        public List<Editor> myEditorList;
         public int GameId;
         public GameStatisticsPage (int gameId)
 		{
@@ -27,7 +27,7 @@ namespace VolleyballApp
           var players = playerDatabase.GetGameFromId(gameId).Players;
            // var players = playerDatabase.GetPlayers();
             players.ToList();
-            myEntryList = new List<Editor>();
+            myEditorList = new List<Editor>();
             //Setting backgroundcolor for mocking borders in our table
             BackgroundColor = Color.DodgerBlue;
            // DisplayAlert("GAME ID", GameId.ToString(), "OK");
@@ -52,8 +52,8 @@ namespace VolleyballApp
                     new Setter{Property = Label.FontSizeProperty, Value = 20}
                 }
             };
-            //Style for entry
-                var entryStyle = new Style(typeof(Editor))
+            //Style for Editor
+                var EditorStyle = new Style(typeof(Editor))
                 {
                     Setters =
                 {
@@ -88,7 +88,7 @@ namespace VolleyballApp
             controlGrid.Children.Add(new Label { Text = "Dig", Style = headerLabelStyle }, 5, 0);
 
 
-            //Dynamically adding players from database and adding entry cells to the grid for each player
+            //Dynamically adding players from database and adding Editor cells to the grid for each player
                 int colNr = 0;
                 int rowNr = 1;
            
@@ -96,16 +96,17 @@ namespace VolleyballApp
                 for (int i = 0; i < players.Count(); i++)
                 {
                 string pName = players.ToList()[i].Name;
-                    controlGrid.Children.Add(new Label  { Text = pName, Style = nameLabelStyle }, colNr, rowNr);
+                string pPos = players.ToList()[i].Position;
+                controlGrid.Children.Add(new Label  { Text = pName, Style = nameLabelStyle }, colNr, rowNr);
                     colNr++;
                     while(colNr < 6)
                     {
                     string idString = pName + colNr.ToString();
-                    myEntryList.Add(
-                        new Editor { Style = entryStyle, ClassId = idString, WidthRequest = 100 }
+                    myEditorList.Add(
+                        new Editor { Style = EditorStyle, ClassId = idString, WidthRequest = 100 }
                     );
                      
-                      //  controlGrid.Children.Add(new Entry  { Style = entryStyle, ClassId= idString}, colNr, rowNr);
+                      //  controlGrid.Children.Add(new Editor  { Style = EditorStyle, ClassId= idString}, colNr, rowNr);
                     System.Diagnostics.Debug.WriteLine(idString);
                     colNr++;
                 }
@@ -115,7 +116,7 @@ namespace VolleyballApp
             rowNr = 1;
             colNr = 1;
             int testnumber = 0;
-            foreach (Editor e in myEntryList)
+            foreach (Editor e in myEditorList)
             {
               
                // e.Text = "Col, Row: " + colNr + "," + rowNr;
@@ -172,34 +173,50 @@ namespace VolleyballApp
             {
                
                 string pname = p.Name;
-                //go through every entry in the grid
-                foreach (Editor statsEntry in myEntryList)
+                //go through every Editor in the grid
+                foreach (Editor statsEditor in myEditorList)
                 {
                     //field for serv
-                    if (statsEntry.ClassId == pname + 1)
+                    if (statsEditor.ClassId == pname + 1)
                     {
-                        inputText = statsEntry.Text;
+                        if(statsEditor.Text == null)
+                        {
+                            inputText = "";
+                        }
+                        else
+                        {
+                            inputText = statsEditor.Text;
+                        }
+                        
                         if (validators.servValidator(inputText))
                         {
-                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = SERV, input text = " + inputText);
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Editor = SERV, input text = " + inputText);
                             p.ServStats = inputText;
                             playerDatabase.UpdatePlayer(p);
                         }
                         else
                         {
-                            DisplayAlert("Invalid", "Invalid entry in Serv", "OK");
+                            DisplayAlert("Invalid", "Invalid Editor in Serv", "OK");
                             allOk = false;
                             break;
                         }
 
                     }
                     //field for reception
-                    else if (statsEntry.ClassId == pname + 2)
+                    else if (statsEditor.ClassId == pname + 2)
                     {
-                        inputText = statsEntry.Text;
+                        if (statsEditor.Text == null)
+                        {
+                            inputText = "";
+                        }
+                        else
+                        {
+                            inputText = statsEditor.Text;
+                        }
+                        
                         if (validators.receptionValidator(inputText))
                         { 
-                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = RECEPTION, input text = " + inputText);
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Editor = RECEPTION, input text = " + inputText);
                             p.ReceptionStats = inputText;
                             playerDatabase.UpdatePlayer(p);
                         }
@@ -212,12 +229,20 @@ namespace VolleyballApp
 
                     }
                     //field for attack
-                    else if (statsEntry.ClassId == pname + 3)
+                    else if (statsEditor.ClassId == pname + 3)
                     {
-                        inputText = statsEntry.Text;
+                        if (statsEditor.Text == null)
+                        {
+                            inputText = "";
+                        }
+                        else
+                        {
+                            inputText = statsEditor.Text;
+                        }
+                        
                         if (validators.attackValidator(inputText))
                         {
-                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = ATTACK, input text = " + inputText);
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Editor = ATTACK, input text = " + inputText);
                             p.AttackStats = inputText;
                             playerDatabase.UpdatePlayer(p);
                         }
@@ -229,9 +254,16 @@ namespace VolleyballApp
                         }
                     }
                     //field for block
-                    else if (statsEntry.ClassId == pname + 4)
+                    else if (statsEditor.ClassId == pname + 4)
                     {
-                        inputText = statsEntry.Text;
+                        if (statsEditor.Text == null)
+                        {
+                            inputText = "";
+                        }
+                        else
+                        {
+                            inputText = statsEditor.Text;
+                        }
                         if (validators.blockValidator(inputText))
                         {
                             System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", BLOCK, input text = " + inputText);
@@ -245,12 +277,19 @@ namespace VolleyballApp
                         }
                     }
                     //field for dig
-                    else if (statsEntry.ClassId == pname + 5)
+                    else if (statsEditor.ClassId == pname + 5)
                     {
-                        inputText = statsEntry.Text;
+                        if (statsEditor.Text == null)
+                        {
+                            inputText = "";
+                        }
+                        else
+                        {
+                            inputText = statsEditor.Text;
+                        }
                         if (validators.digValidator(inputText))
                         {
-                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Entry = DIG, input text = " + inputText);
+                            System.Diagnostics.Debug.WriteLine("in Player " + p.Name + ", Editor = DIG, input text = " + inputText);
                             p.DigStats = inputText;
                             playerDatabase.UpdatePlayer(p);
                         }
