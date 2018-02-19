@@ -22,7 +22,6 @@
             <ListView x:Name="teamMembersListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<TextCell Text="{Binding Name}"  Detail="{Binding Position}"/>-->
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout Orientation="Vertical">

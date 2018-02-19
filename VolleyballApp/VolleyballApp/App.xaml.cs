@@ -16,13 +16,7 @@ namespace VolleyballApp
 
             MainPage = new NavigationPage(new MainPage());
 		}
-    /*    public App(string DB_Path)
-        {
-            InitializeComponent();
-            DB_PATH = DB_Path;
-            MainPage = new NavigationPage(new MainPage());
-        }
-*/
+
 		protected override void OnStart ()
 		{
 			// Handle when your app starts

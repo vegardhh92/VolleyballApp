@@ -54,16 +54,6 @@ namespace db
             );
     }
 
-    /*
-    public class SetScore
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-
-        public string Score { get; set; }
-    }
-    */
-
     public class PlayerGame
     {
         [ForeignKey(typeof(Player))]
