@@ -7,7 +7,6 @@ namespace VolleyballApp.Utils
 {
     class Validators
     {
-
         public bool NewPlayerValidator(string numb, string name, string position)
         {
             return (pNameValidator(name) && pNumberValidator(numb) && pPosValidator(position));
@@ -43,7 +42,7 @@ namespace VolleyballApp.Utils
 
         public Boolean pNameValidator(string name)
         {
-            string nameRegEx = "^[A-Za-z'.-]+$";
+            string nameRegEx = "^[\\D-\\.\\s]+$";
 
             return (name != null && Regex.IsMatch(name, nameRegEx));
 
@@ -56,7 +55,7 @@ namespace VolleyballApp.Utils
 
         public Boolean servValidator(string servs)
         {
-            string servRegEx = "[0+-]";
+            string servRegEx = "^[0\\+-]+$";
             if (servs == "" || Regex.IsMatch(servs, servRegEx))
             {
                 System.Diagnostics.Debug.WriteLine("Serv OK");
@@ -72,7 +71,8 @@ namespace VolleyballApp.Utils
 
         public Boolean attackValidator(string attacks)
         {
-            string attackRegEx = "[+-0]";
+     
+            string attackRegEx = "^[\\+-0]+$";
             if (attacks == "" || Regex.IsMatch(attacks, attackRegEx))
             {
                 System.Diagnostics.Debug.WriteLine("attack ok");
@@ -86,7 +86,7 @@ namespace VolleyballApp.Utils
         }
         public Boolean receptionValidator(string rec)
         {
-            string servRegEx = "[12345]";
+            string servRegEx = "^[1-5]+$";
             if (rec == "" || Regex.IsMatch(rec, servRegEx))
             {
                 System.Diagnostics.Debug.WriteLine("reception ok");
@@ -100,7 +100,7 @@ namespace VolleyballApp.Utils
         }
         public Boolean blockValidator(string block)
         {
-            string blockRegEx = "[+k]";
+            string blockRegEx = "^[\\+k]+$";
             if (block == "" || Regex.IsMatch(block, blockRegEx))
             {
                 System.Diagnostics.Debug.WriteLine("block ok");
@@ -115,7 +115,7 @@ namespace VolleyballApp.Utils
 
         public Boolean digValidator(string dig)
         {
-            string servRegEx = "[!]";
+            string servRegEx = "^[!]+$";
             if (dig == "" || Regex.IsMatch(dig, servRegEx))
             {
                 System.Diagnostics.Debug.WriteLine("dig ok");

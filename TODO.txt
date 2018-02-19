@@ -38,8 +38,9 @@ MUST GET DONE:
 
 
 # Issues and Todo
-* My players does not support space in name. Should it?
-* Statistics still crashes on empty input
+* Colors and button on statisticspage
+* My players does not support space in name. Should it? No
+* Statistics still crashes on empty input - FIXED
 * Implement setScore
 * Remove debug-output
 * New Game needs scroll for very small/short windows (Less important)
