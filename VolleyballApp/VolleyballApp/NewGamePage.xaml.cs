@@ -47,7 +47,8 @@ namespace VolleyballApp
             ClearFields();
             if (game.Players.Count > 0) { 
                 database.AddGame(game);
-                Navigation.PushAsync(new GameStatisticsPage(game.Id));
+                //Navigation.PushAsync(new GameStatisticsPage(game.Id));
+              Navigation.PushAsync(new GameStatsPageV2(game.Id));
             }
             else if (availablePlayers.Count > 0)
             {
